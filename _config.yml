@@ -10,7 +10,7 @@ mathjax: true
 url: https://martianlantern.github.io/
 permalink: /:year/:month/:title/
 owner:
-    name: Darshan Makwana
+    name: martianlantern
     twitter: martianlantern
     github: martianlantern
     disqus_shortname: #
