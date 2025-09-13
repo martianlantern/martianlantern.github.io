@@ -1,0 +1,21 @@
+name: martianlantern
+
+sass:
+  sass_dir: assets/css/_sass
+  style: :compressed
+
+markdown: kramdown
+mathjax: true
+
+url: https://martianlantern.github.io/
+permalink: /:year/:month/:title/
+owner:
+    name: Darshan Makwana
+    twitter: martianlantern
+    github: martianlantern
+    disqus_shortname: #
+
+ga_id: #
+ga_username: #
+
+timezone: India/Delhi
