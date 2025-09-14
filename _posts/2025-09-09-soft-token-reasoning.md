@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: Soft Token Reasoning
 date: 2025-09-09
@@ -86,4 +86,4 @@ while not EOS:
 
 complexity notes: computing $s_{i+1}$ is $O(n\,d)$ after top-$k/p$ pruning; entropy is $O(|V|)$ and usually negligible relative to the forward pass. overall latency depends on how many soft steps are taken before cold stop.
 
-failure modes and knobs to tune: repeated soft steps can drift off-manifold; cold stop mitigates but does not guarantee safety. the linearization view explains the approximation but does not provide tight error bounds without stronger smoothness assumptions. practical hyperparameters are $\tau$ (entropy threshold), $k$ (patience), and $n$ (post-filter support size).
+failure modes and knobs to tune: repeated soft steps can drift off-manifold; cold stop mitigates but does not guarantee safety. the linearization view explains the approximation but does not provide tight error bounds without stronger smoothness assumptions. practical hyperparameters are $\tau$ (entropy threshold), $k$ (patience), and $n$ (post-filter support size). -->
