@@ -5,8 +5,8 @@
     {
         "title": "{{ post.title | escape }}",
         "url": "{{ site.url }}{{ post.url }}",
-        "date": "{{ post.date  | date: '%A %-d %B %Y' }}"
+        "date": "{{ post.date | date: '%b %-d, %Y' }}",
+        "content": {{ post.content | strip_html | truncatewords: 200 | jsonify }}
     } {% if forloop.last %}{% else %}, {% endif %}
     {% endfor %}
 ]
-

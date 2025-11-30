@@ -1,55 +1,233 @@
-// Refactored @Wed, march 11, 2015
-// Custom containers & wrappers
-body {
-  color:#000;
-  // font: 17px Poly, Georgia, serif, Arial !important;
-  font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, Oxygen, Ubuntu, Cantarell, open sans, helvetica neue, sans-serif;
-  font-size: 16px;
-  letter-spacing: 0.001em;
+// Exact grohan.co styling - copied from source
+
+// Reset
+*, :after, :before {
+  box-sizing: border-box;
 }
 
-.footer {height:60px;}
+// Base styles - grohan.co style
+body {
+  font: 16px/1.6 Verdana, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica, helvetica neue, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  text-rendering: optimizeSpeed;
+  color: #353535;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
 
-main {position: relative;}
+// Links - stand out from text
+a {
+  color: #353535;
+  text-decoration: underline;
+  text-decoration-color: #999;
+  text-underline-offset: 2px;
+  
+  &:hover,
+  &:focus {
+    background-color: #f0f0f0;
+    color: #000;
+    text-decoration-color: #353535;
+  }
+}
+
+// Navigation and UI links - no underline
+.sidebar a,
+.top a,
+.posts a,
+.result-header,
+.result-snippet,
+.title {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.footer { height: 60px; }
+
+main { position: relative; }
+
+// Posts list - grohan.co style
+.posts-list {
+  padding: 0 15px;
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    
+    a {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-decoration: none;
+      color: #353535;
+      
+      &:hover {
+        background-color: #f0f0f0;
+        color: #000;
+      }
+    }
+    
+    hr {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-right: 0.5rem;
+      margin-left: 0.5rem;
+      height: 1px;
+      border: none;
+      border-bottom: 1px dotted #353535;
+      flex: 1 0 1rem;
+    }
+    
+    time {
+      padding-left: 1rem;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      color: #353535;
+    }
+  }
+}
 
 .page {
   margin: 0;
-  .page-item:last-child {border-bottom: none;}
+  .page-item:last-child { border-bottom: none; }
 }
 
 .page-item {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid #eee;
-  padding: 7px 0 0;
-  &:hover {background: $primary-color;}
+  padding: 15px 0;
+  
+  &:hover {
+    background: #f0f0f0;
+  }
+  
   &:hover .meta,
-  &:hover .meta a{
-    color: #333;
+  &:hover .meta a {
+    color: #353535;
   }
 }
 
 .page-item-title {
   list-style: none;
   padding: 0;
-  .fa-comments-o {color: black;}
-  .fa-ellipsis-h {color: #428bca;}
-  .fa-compress {color: red;}
-  .fa-expand {color: #22D722;}
+  margin: 0;
+  
+  li {
+    margin-bottom: 4px;
+  }
+  
+  .fa-comments-o { color: #353535; }
+  .fa-ellipsis-h { color: #353535; }
+  .fa-compress { color: #e74c3c; }
+  .fa-expand { color: #27ae60; }
 }
 
-.page-item-body {display: none;}
+.page-item-body { display: none; }
 
+// Page title - grohan.co h2 style
 .page-title {
-  font-size: 31px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: bold;
   padding: 0 0 0 15px;
+  color: #353535;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
 }
 
 .page-content {
   position: relative;
   overflow: hidden;
   padding: 20px 15px 0;
+  
+  p {
+    margin-bottom: 1em;
+    line-height: 1.5;
+  }
+  
+  // Headings with hash anchor - exact grohan.co style
+  h1, h2, h3, h4, h5, h6 {
+    color: #353535;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    
+    .hash, &:after {
+      opacity: 0.25;
+      text-decoration: none;
+      margin-left: 0.5em;
+    }
+  }
+  
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  h4 { font-size: 16px; }
+  
+  strong, b {
+    font-weight: bold;
+  }
+  
+  em, i {
+    font-style: italic;
+  }
+  
+  // Blockquote - exact grohan.co
+  blockquote {
+    border-left: 5px solid #353535;
+    padding-left: 1rem;
+    margin: 1em 0;
+  }
+  
+  // Lists - exact grohan.co
+  ul {
+    list-style-type: square;
+  }
+  
+  ul, ol {
+    padding-left: 1.2rem;
+    margin-bottom: 1em;
+    
+    li {
+      margin-bottom: 0.3em;
+      line-height: 1.5;
+    }
+  }
+  
+  // Images - exact grohan.co
+  img {
+    max-width: 100%;
+    border: 1px solid #353535;
+  }
+  
+  // Tables - exact grohan.co
+  table {
+    border-collapse: collapse;
+    text-align: left;
+    width: 100%;
+    margin: 1em 0;
+    
+    tr {
+      background: #fff;
+      border-bottom: 1px solid;
+    }
+    
+    th, td {
+      padding: 10px 20px;
+    }
+  }
 }
 
 .page-list {
@@ -57,9 +235,9 @@ main {position: relative;}
   margin: 0;
 }
 
-.page-list > li:first-child {padding-top: 0;}
+.page-list > li:first-child { padding-top: 0; }
 
-.page-list > li {padding-top: 20px;}
+.page-list > li { padding-top: 20px; }
 
 .page-list-item {
   .page-image { 
@@ -72,26 +250,19 @@ main {position: relative;}
   width: 100%;
   height: 230px;
   overflow: hidden;
+  
   img {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;  
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
-    width: 70rem;
-    &:hover {
-      width: 100%;
-      margin-top: -13rem;
-    }
+    width: 100%;
+    object-fit: cover;
   }
 }
 
-.comments {border-top: 2px solid #000;}
+.comments { border-top: 1px solid #353535; }
 
 .share {
   margin-top: 60px;
-  background: $primary-color;
-  padding:20px;
+  background: #f0f0f0;
+  padding: 20px;
 }
 
 .links {
@@ -104,7 +275,7 @@ main {position: relative;}
 
 .results {
   padding: 0;
-  li {padding: 20px 0 0;}
+  li { padding: 20px 0 0; }
 }
 
 #wrap {
@@ -113,27 +284,31 @@ main {position: relative;}
   margin: 0 auto -70px;
   padding: 0;
   position: relative;
+  
   .container {
-    max-width: 800px!important;
-    padding: 75px 0 60px;
+    max-width: 850px !important;
+    padding: 20px;
+    margin: auto;
   }
+  
   #body {
     min-height: 600px;
     overflow: hidden;
   }
 }
 
-#search {z-index: 100;}
+#search { z-index: 100; }
 
 // Navigation
 #nav {
   padding: 0 !important;
+  
   .separator {
-    color: #333!important;
-    font-weight:700!important;
+    color: #353535 !important;
+    font-weight: bold !important;
     margin-bottom: 1px;
     margin-top: 1px;
-    background: $primary-color;
+    background: #f0f0f0;
     padding: 10px 0 10px 10px;
   }
 }
@@ -141,32 +316,43 @@ main {position: relative;}
 .sidebar {
   position: fixed;
   min-width: 139px;
-  padding: 0!important;
+  padding: 0 !important;
+  
   a {
-    font-weight: 700!important;
+    font-weight: bold !important;
+    text-decoration: none;
+    color: #353535;
+    
     &:hover,
     &:focus {
       text-decoration: none;
-      color: $lnk-highlight-color;
+      background-color: #f0f0f0;
+      color: #000;
     }
   }
+  
   li {
     list-style-type: none;
     display: block;
-    background: $primary-color;
+    background: #f0f0f0;
     margin: 0;
-    padding: 5px 10px;
+    padding: 8px 12px;
+    
+    &:hover {
+      background: #e0e0e0;
+    }
   }
 }
 
-// Miscellenous
-ul {list-style-type: square;}
+// Miscellaneous - exact grohan.co
+ul { list-style-type: square; }
 
 // Twitter timeline
-.twitter-timeline {width: 100% !important;}
+.twitter-timeline { width: 100% !important; }
 
 .tweet-block {
   margin-top: 70px;
+  
   .text-block { 
     background-color: #fff !important;
     margin: 10px 0;     
@@ -177,8 +363,8 @@ ul {list-style-type: square;}
 .statusbar {
   top: 0;
   position: fixed;
-  background-color: #eb5e29;
-  height: 2px;
+  background-color: #353535;
+  height: 1px;
   z-index: 20;
 }
 
@@ -187,56 +373,255 @@ ul {list-style-type: square;}
   font-size: 15px !important;
   cursor: pointer;
   margin: 1px 0;
-  background: $primary-color;
-  i {color: #333;}
+  background: #f0f0f0;
+  
+  i { color: #353535; }
+  
   &:hover,
   &:focus,
-  &:hover i {color: red;}
+  &:hover i { 
+    background-color: #f0f0f0;
+    color: #000; 
+  }
 }
 
 .link {
-  color: $lnk-color;
+  color: #353535;
   min-width: 139px;
+  text-decoration: none;
+  
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $lnk-highlight-color;
+    background-color: #f0f0f0;
+    color: #000;
   }
 }
 
-#twitter-ic {color: #55acee !important;}
+#twitter-ic { color: #1da1f2 !important; }
 
-#git-ic {color: #333 !important;}
+#git-ic { color: #353535 !important; }
 
-#rss-ic {color: #ff9933 !important;}
+#rss-ic { color: #f26522 !important; }
 
 .top {
   line-height: 40px;
-  background-color: white;
-  font-weight: 700 !important;  
-  // padding-left: 8px;
-  a {color: #333;}
+  background-color: #fff;
+  font-weight: bold !important;
+  
+  a {
+    color: #353535;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+  }
+  
   span {
-    a {padding-left: 3px;}
+    a { 
+      padding-left: 8px;
+      color: #353535;
+      
+      &:hover {
+        background-color: #f0f0f0;
+        color: #000;
+      }
+    }
   }
 }
 
+// Code blocks - grohan.co style
+code, pre {
+  color: #353535;
+  font-family: San Francisco Mono, Monaco, consolas, lucida console, dejavu sans mono, bitstream vera sans mono, monospace;
+  font-size: 14px;
+  border: 1px solid #353535;
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+  border: none;
+}
+
 pre {
-  border: none !important;
-  border-radius: 0px !important;
+  padding: 0.75rem 1rem !important;
+  overflow-x: auto;
+  border: 1px solid #353535 !important;
+  border-radius: 0 !important;
+  background-color: #fff !important;
+  margin: 1.5em 0 !important;
+  line-height: 1.5;
+  
+  code {
+    border: none;
+    padding: 0;
+    font-size: 14px;
+    background: none;
+  }
+}
+
+// Inline code
+.page-content code {
+  padding: 0.1rem 0.3rem;
+  border: none;
+  background: none;
+}
+
+// HR - exact grohan.co
+hr {
+  background: #353535;
+  height: 1px;
+  border: 0;
+}
+
+// Search page styles - grohan.co style
+.search-page {
+  padding: 0 15px;
+}
+
+.search-container {
+  margin-bottom: 2rem;
+}
+
+.search-input {
+  font: 16px/1.5 Verdana, -apple-system, BlinkMacSystemFont, sans-serif;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #353535;
+  outline: none;
+  background: none;
+  margin: 0;
+  padding: 0.75em 0;
+  color: #353535;
+  
+  &:focus {
+    border-bottom-width: 2px;
+  }
+  
+  &::placeholder {
+    color: #999;
+  }
+}
+
+.search-results {
+  margin-top: 1rem;
+}
+
+.results-count {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.no-results {
+  color: #888;
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.results-list {
+  padding: 0;
+  margin: 0;
+}
+
+.result-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.result-header {
+  text-decoration: none;
+  display: block;
+  color: #353535;
+  margin-bottom: 0.75rem;
+  
+  &:hover {
+    .result-title {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #353535;
+  display: inline;
+  
+  mark {
+    background-color: #fff3cd;
+    color: #353535;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+}
+
+.result-meta {
+  font-size: 13px;
+  color: #888;
+  margin-left: 0.75rem;
+}
+
+.result-snippets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 2px solid #eee;
+}
+
+.result-snippet {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  background: #fafafa;
+  border-radius: 3px;
+  transition: background-color 0.15s ease;
+  
+  &:hover {
+    background-color: #f0f0f0;
+    color: #353535;
+  }
+  
+  mark {
+    background-color: #fff3cd;
+    color: #353535;
+    padding: 1px 3px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
 }
 
 #searchbox {
-  font-size: 22px;
+  font: 1rem/1.5 Verdana, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
   display: block;
   width: 100%;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #353535;
   outline: none;
   background: none;
   margin: 0;
-  padding: .1em 0 1px;
+  padding: .5em 0;
+  
+  &:focus {
+    border-bottom-color: #000;
+  }
 }
 
 .icon-remove-sign {
@@ -253,76 +638,94 @@ pre {
 
 .leaders {
   padding-left: 5px;
-  overflow:hidden;
-  i {color:#333;}
+  overflow: hidden;
+  
+  i { color: #353535; }
+  
   li:after {
-    content:"";
-    display:block;
-    overflow:hidden;
-    height:1em;
-    border-bottom:2px dotted;
+    content: "";
+    display: block;
+    overflow: hidden;
+    height: 1em;
+    border-bottom: 1px dotted #353535;
   }
+  
   .leaders-left {
-    float:left;
-    margin:0;
-    padding:0 .2em 0 0;
-    cursor:pointer;
+    float: left;
+    margin: 0;
+    padding: 0 .2em 0 0;
+    cursor: pointer;
   }
+  
   .leaders-right {
-    float:right;
-    margin:0;
-    padding:0 0 0 .2em;
-    cursor:pointer;
+    float: right;
+    margin: 0;
+    padding: 0 0 0 .2em;
+    cursor: pointer;
   }
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: bold;
+  color: #353535;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: #f0f0f0;
+    color: #000;
+  }
 }
 
-.pib-indicator {cursor:pointer;}
+.pib-indicator { cursor: pointer; }
 
+// Meta info - grohan.co style
 .meta,
 .meta a {
-  font-size: 16px;
-  color: #afafaf;
+  font-size: 15px;
+  color: #888;
+  text-decoration: none;
+  margin: 0 0 2.5rem;
 }
 
 .tags,
-.tag-pages {margin: 25px 0;}
+.tag-pages { margin: 25px 0; }
 
-#projects-preable {font-style: italic;}
+.tags::before {
+  content: "\2022";
+  margin-left: 1rem;
+}
 
-// media queries
+#projects-preable { font-style: italic; }
+
+// Media queries
 @media (max-width: 425px) {
-  .top span {display: none;}
+  .top span { display: none; }
 }
 
 @media (min-width: 768px) {
   #menu,
-  .comments-meta {display: none;}
+  .comments-meta { display: none; }
 }
 
 @media (max-width: 768px) {
-  #wrap {margin-top: -75px !important;}
+  #wrap { margin-top: -75px !important; }
 
-  
   #wrap > .container > .row {
     margin: 0;
   }
   
   #menu {
     display: block;
-    color: #428bca !important;
-    font-weight: 700 !important;
+    color: #353535 !important;
+    font-weight: bold !important;
     margin-top: 1px;
-    background: $primary-color;
+    background: #f0f0f0;
     padding: 10px 0 10px 10px;
     position: relative;
   }
 
-  .menu-btn,.close-btn {
+  .menu-btn, .close-btn {
     position: absolute;
     top: 0.4em;
     left: 1.875em;
@@ -363,12 +766,12 @@ pre {
   #nav {
     height: 100%;
     min-height: 515px;
-    background: $primary-color;
+    background: #f0f0f0;
     position: absolute;
     z-index: 1200;
   }
 
-  .sidebar{
+  .sidebar {
     margin-left: 1.875em;
     position: relative !important;
   }
@@ -379,7 +782,7 @@ pre {
   
   .row-offcanvas-left .sidebar-offcanvas {
     position: absolute;
-    top:0;
+    top: 0;
     left: -70%;
   }
   
@@ -393,29 +796,28 @@ pre {
     width: 70% !important;
   }
 
-  .meta li {display: inline;}
+  .meta li { display: inline; }
   
-  .hide-on-phone {display: none;}
+  .hide-on-phone { display: none; }
   
-  .comments-meta {display: block;}
+  .comments-meta { display: block; }
 }
 
 @media (max-width: 480px) {
-  .page-image {
-    img {
-      &:hover {
-        width: 100%;
-        margin-top: -1rem;
-      }
-    }
+  body {
+    font-size: 0.9rem;
+  }
+  
+  .page-title {
+    font-size: 1.3em;
   }
 
-  #menu .menu-title, .page-nav {display: none;}
+  #menu .menu-title, .page-nav { display: none; }
 
-  #menu {height: 50px;}
+  #menu { height: 50px; }
   
   .leaders {
-    .leaders-left  {width: 40%;}
-    .leaders-right {width: 60%;}
+    .leaders-left { width: 40%; }
+    .leaders-right { width: 60%; }
   } 
 }
