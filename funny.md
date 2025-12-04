@@ -1,1 +1,0 @@
-[Climbing a different type of tree](https://www.youtube.com/shorts/cIQ8vbiL_pA)
