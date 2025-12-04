@@ -26,6 +26,10 @@
                     <nav class="top">
                         <a href="{{ "/index.html" | prepend: site.url }}">{{ site.name }}</a>
                         <span class="pull-right">
+                            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                                <span class="moon-icon">☽</span>
+                                <span class="sun-icon">☀</span>
+                            </button>
                             <a id="git-ic" class="link" href="https://github.com/{{site.owner.github}}">
                                 <i class="fa fa-github-square fa-lg"></i>
                             </a>

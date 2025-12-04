@@ -26,7 +26,7 @@ here $\bar{p}_j^i$, $\bar{q}_j^i$ are normalized performance and efficiency prof
 
 At test time for an input query the \$top\$-\${p}\$ closest clusters in the embedding space are computed from encoding the query using a text embedding model. The query is then routed to the model with the highest aggregated cluster wise performance–efficiency score.
 
-<img src="/assets/images/routing_image_1.png" width=620/>
+<img src="/assets/images/llm-routing/routing_image_1.png" width=620/>
 Figure 1: Effects of the trade-off parameter $\alpha$ on the performance and efficiency. A greater value of $\alpha$ prioritizes performance over efficiency. The increase in performance is usually accompanied with increase in cost (source: [Zhang et al. 2025](https://arxiv.org/abs/2508.12631)).
 
 They note their routing outperforms all individual models for higher values of \$\alpha\$ when performance is prioritized. Thus at levels comparable to the performance of the strongest model the routing achieves significantly lower cost.
@@ -49,7 +49,7 @@ Because \$\mathcal{C}\$ is in-prompt, the router can adopt new routes at inferen
 
 There are 2 phases in the data creation pipeline, first generate a clean and diverse policy set and LLM-verified conversations aligned to those policies; then add realism by injecting irrelevance and noise, perturbing the candidate policy set, and mixing scenarios so the model stays robust to topic drift and multi-turn dependencies. Each training sample bundles the conversation, the full \$\mathcal{C}\$, and the gold policy.
 
-<img src="/assets/images/arc_router.jpeg" width="650"/>
+<img src="/assets/images/llm-routing/arc_router.jpeg" width="650"/>
 Figure 2: Preference-aligned routing decouples policy selection $F$ from model assignment $T$. New models just edit $T$; new use cases are appended to $\mathcal{C}$. (source: [Tran et al. 2025](https://arxiv.org/pdf/2506.16655))
 
 As a 1.5B model, Arch-Router runs in the tens of milliseconds on commodity GPUs and reports about 28× lower end-to-end latency than the closest commercial competitor under their setup, while matching or exceeding routing accuracy.
@@ -64,7 +64,7 @@ $$
 
 with unit-normalized \$\hat{\cdot}\$, which gives a linear bandit over \$\psi(q\_t)\$
 
-<img src="/assets/images/bandit_query.jpeg" width="650"/>
+<img src="/assets/images/llm-routing/bandit_query.jpeg" width="650"/>
 Figure 3: 1) leverage human preference dataset to learn
 query embeddings which are aligned w.r.t. human preferences on query-LLM mapping. Then, in 2) learn
 LLM embeddings aligned with projected queries (source: [Panda et al. 2025](https://arxiv.org/pdf/2508.21141))

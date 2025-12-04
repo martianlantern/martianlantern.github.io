@@ -6,6 +6,30 @@
           {% include scripts/page-effects.html %}
           {% include scripts/sidebar.html %}
           {% include scripts/timeago.html %}
+          
+          // Dark mode toggle
+          (function() {
+            var toggle = document.getElementById('theme-toggle');
+            var html = document.documentElement;
+            
+            // Check for saved preference or system preference
+            var savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+              html.setAttribute('data-theme', savedTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              html.setAttribute('data-theme', 'dark');
+            }
+            
+            // Toggle handler
+            if (toggle) {
+              toggle.addEventListener('click', function() {
+                var currentTheme = html.getAttribute('data-theme');
+                var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+              });
+            }
+          })();
         </script>
     </body>
 </html>
