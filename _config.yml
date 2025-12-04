@@ -7,7 +7,7 @@ sass:
 markdown: kramdown
 mathjax: true
 
-url: https://martianlantern.github.io/
+url: https://martianlantern.github.io
 permalink: /:year/:month/:title/
 owner:
     name: martianlantern
