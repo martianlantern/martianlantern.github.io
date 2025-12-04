@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Updating my Bash Prompt
-date: 2025-09-28
+date: 2025-11-12
 comments: false
 tags: [bash, prompt, customization]
 archive: false

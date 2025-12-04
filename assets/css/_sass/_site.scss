@@ -54,6 +54,22 @@ main { position: relative; }
   padding: 0 15px;
 }
 
+.month-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e1e4e8;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
 .posts {
   list-style: none;
   padding: 0;
@@ -940,6 +956,12 @@ hr {
   
   .title {
     color: #c9d1d9;
+  }
+  
+  // Month heading
+  .month-heading {
+    color: #8b949e;
+    border-bottom-color: #30363d;
   }
   
   // Posts list

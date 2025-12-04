@@ -7,16 +7,14 @@
           {% include scripts/sidebar.html %}
           {% include scripts/timeago.html %}
           
-          // Dark mode toggle
+          // Dark mode toggle - default to light mode
           (function() {
             var toggle = document.getElementById('theme-toggle');
             var html = document.documentElement;
             
-            // Check for saved preference or system preference
+            // Only apply dark mode if explicitly saved
             var savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-              html.setAttribute('data-theme', savedTheme);
-            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            if (savedTheme === 'dark') {
               html.setAttribute('data-theme', 'dark');
             }
             

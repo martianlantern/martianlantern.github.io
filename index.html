@@ -3,16 +3,22 @@ layout: default
 ---
 <div class="col-sm-12">
     <div class="posts-list">
-        <ul class="posts">
-            {% for post in site.posts %}
-                {% if post.archive == false %}
-                <li>
-                    <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
-                    <hr>
-                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-                </li>
+        {% assign current_month = "" %}
+        {% for post in site.posts %}
+            {% if post.archive == false %}
+                {% assign post_month = post.date | date: "%B %Y" %}
+                {% if post_month != current_month %}
+                    {% assign current_month = post_month %}
+                    <h3 class="month-heading">{{ post.date | date: "%b, %Y" }}</h3>
                 {% endif %}
-            {% endfor %}
-        </ul>
+                <ul class="posts">
+                    <li>
+                        <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+                        <hr>
+                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d" }}</time>
+                    </li>
+                </ul>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
