@@ -98,6 +98,20 @@ Built text-conditional latent diffusion models for product photography generatio
 Developed contextual AI chatbots for B2B applications. Trained BERT and spaCy models with DIET classifier for intent and entity recognition. Built evaluation pipelines for stress testing.
 </div>
 
+## Projects
+
+<div class="cv-entry project-entry">
+<div class="cv-header">
+<div class="cv-left">
+<strong><a href="https://github.com/martianlantern/ThinkMesh">ThinkMesh</a></strong>
+<span class="project-stars">★ 259</span>
+</div>
+<span class="project-tech">Python</span>
+</div>
+
+Parallel reasoning framework for LLMs. Implements multiple strategies—DeepConf (confidence-gated filtering), Self-Consistency (majority voting), Debate (multi-agent discussion), Tree of Thoughts (tree search), and Graph reasoning—all running in parallel with configurable compute budgets. Supports local models via Transformers/vLLM and external APIs. Used for mathematical reasoning and complex problem solving.
+</div>
+
 ## Education
 
 **Aalto University** — Helsinki, Finland  
