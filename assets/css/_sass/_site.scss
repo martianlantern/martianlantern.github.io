@@ -896,47 +896,44 @@ hr {
 }
 
 // ============================================
-// CV PAGE
+// CV PAGE - Inspired by jessylin.com
 // ============================================
 .cv-page {
   h2 {
-    font-size: 16px;
-    font-weight: 600;
+    font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin: 2.5rem 0 1.2rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid #e1e4e8;
-    color: #888;
+    letter-spacing: 2px;
+    margin: 2.5rem 0 1.5rem;
+    color: #aaa;
     
     &:first-of-type {
       margin-top: 0;
     }
   }
   
-  // Entry: Institution name (bold) with location
   p {
-    margin-bottom: 0.3rem;
-    
-    strong {
-      color: #353535;
-    }
+    margin: 0.5rem 0 0 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.7;
     
     em {
-      color: #666;
-      font-style: normal;
+      color: #888;
+      font-style: italic;
     }
   }
   
-  // Bullet points for details
+  // Education section uses simple markdown
   ul {
-    margin: 0.4rem 0 1.8rem 0;
+    margin: 0.5rem 0 0 0;
     padding-left: 1.2rem;
     
     li {
-      color: #555;
       font-size: 14px;
-      line-height: 1.7;
+      color: #555;
+      line-height: 1.6;
       margin-bottom: 0.2rem;
       
       &::marker {
@@ -944,6 +941,135 @@ hr {
       }
     }
   }
+}
+
+.cv-entry {
+  position: relative;
+  margin-bottom: 2.2rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e8e8e8;
+  
+  &:hover {
+    border-left-color: #ccc;
+  }
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+  
+  strong {
+    font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: -0.2px;
+  }
+  
+  > .cv-date {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    font-size: 11px;
+    color: #999;
+    white-space: nowrap;
+    background: #f8f8f8;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+}
+
+.cv-left {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cv-location {
+  font-size: 13px;
+  color: #888;
+  font-weight: 400;
+  
+  &::before {
+    content: "—";
+    margin: 0 0.4rem;
+    color: #ddd;
+  }
+}
+
+.cv-position {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0.8rem 0 0.4rem 0;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #eee;
+  
+  &:first-of-type {
+    margin-top: 0.6rem;
+    padding-top: 0;
+    border-top: none;
+  }
+  
+  .cv-role {
+    font-size: 13px;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .cv-date {
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+    font-size: 10px;
+    color: #aaa;
+  }
+}
+
+.edu-details {
+  margin-top: 0.6rem;
+}
+
+.edu-row {
+  display: flex;
+  align-items: baseline;
+  padding: 0.25rem 0;
+  font-size: 14px;
+  
+  &.highlight-row {
+    margin-top: 0.3rem;
+    padding-top: 0.4rem;
+    border-top: 1px dashed #eee;
+  }
+}
+
+.edu-label {
+  width: 80px;
+  flex-shrink: 0;
+  color: #999;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.edu-value {
+  flex: 1;
+  color: #444;
+  
+  a {
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+  }
+}
+
+.edu-score {
+  margin-left: 1rem;
+  color: #666;
+  font-size: 13px;
+  white-space: nowrap;
 }
 
 // ============================================
@@ -1156,19 +1282,41 @@ hr {
   
   // CV page
   .cv-page {
-    h2 {
-      border-bottom-color: #30363d;
-      color: #8b949e;
-    }
+    h2 { color: #6e7681; }
     
-    p strong { color: #c9d1d9; }
-    p em { color: #8b949e; }
+    p { 
+      color: #adbac7;
+      em { color: #8b949e; }
+    }
     
     ul li {
-      color: #8b949e;
-      
-      &::marker { color: #30363d; }
+      color: #adbac7;
+      &::marker { color: #484f58; }
     }
+  }
+  
+  .cv-entry {
+    border-left-color: #30363d;
+    &:hover { border-left-color: #484f58; }
+  }
+  
+  .cv-header {
+    strong { color: #c9d1d9; }
+    > .cv-date { 
+      color: #8b949e;
+      background: #21262d;
+    }
+  }
+  
+  .cv-location { 
+    color: #8b949e;
+    &::before { color: #484f58; }
+  }
+  
+  .cv-position {
+    border-top-color: #21262d;
+    .cv-role { color: #8b949e; }
+    .cv-date { color: #6e7681; }
   }
   
   // HR

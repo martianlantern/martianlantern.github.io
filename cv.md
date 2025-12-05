@@ -10,35 +10,93 @@ permalink: /cv/
 
 ## Experience
 
-**Sprinklr** — Machine Learning Engineer  
-*Gurugram, India* | Aug 2025 – Present
+<div class="cv-entry">
+<div class="cv-header">
+<div class="cv-left">
+<strong>Sprinklr</strong>
+<span class="cv-location">Gurugram, India</span>
+</div>
+<span class="cv-date">May 2024 – Present</span>
+</div>
 
-Building production ML infrastructure for real-time voice AI. Architected and deployed optimized speech-to-text pipelines using vLLM, achieving significant latency improvements. Designed a custom vLLM scheduler for priority-based request routing in STT workloads, now running in production. Currently leading development of end-to-end voice bots for real-time conversational AI.
+<div class="cv-position">
+<span class="cv-role">Machine Learning Engineer</span>
+<span class="cv-date">Aug 2025 – Present</span>
+</div>
 
-**Aalto Vision Lab** — Research Assistant  
-*Helsinki, Finland* | Jan 2025 – Jun 2025
+Building production ML infrastructure for real-time voice AI. Architected and deployed optimized speech-to-text pipelines using vLLM with significant latency improvements. Designed a custom vLLM scheduler for priority-based request routing in STT workloads, now running in production. Currently leading development of end-to-end voice bots for real-time conversational AI.
 
-Worked under [Matias Turkulainen](https://maturk.github.io/) and [Juho Kannala](https://users.aalto.fi/~kannalj1/) on 3D reconstruction. Built distributed training infrastructure for Gaussian Splatting using SLURM. Conducted systematic benchmarking and ablation studies across Gaussian Splatting pipelines to identify performance bottlenecks.
+<div class="cv-position">
+<span class="cv-role">Product Intern</span>
+<span class="cv-date">May 2024 – Jul 2024</span>
+</div>
 
-**Sprinklr** — Product Intern  
-*Gurugram, India* | May 2024 – Jul 2024
+Evaluated unified speech-to-speech models against traditional STT→LLM→TTS pipelines. Benchmarked open-source and proprietary models across latency, quality, and cost dimensions. Delivered a cost-effective solution competitive with closed-source alternatives. *Received Pre-Placement Offer.*
+</div>
 
-Evaluated unified speech-to-speech models against traditional STT→LLM→TTS pipelines. Benchmarked open-source and proprietary models across latency, quality, and cost dimensions. Delivered a cost-effective solution competitive with closed-source alternatives, influencing the team's voice AI roadmap.
+<div class="cv-entry">
+<div class="cv-header">
+<div class="cv-left">
+<strong>Aalto Vision Lab</strong>
+<span class="cv-location">Helsinki, Finland</span>
+</div>
+<span class="cv-date">Jan 2025 – Jun 2025</span>
+</div>
 
-**Technical University of Munich** — Research Intern  
-*Munich, Germany* | Jun 2023 – Jul 2023
+<div class="cv-position">
+<span class="cv-role">Research Assistant</span>
+</div>
 
-Researched system identification and deep RL for quadruped robot control under Hongpeng Cao and Marco Caccamo. Developed simulation models capturing robot dynamics and uncertainties. Compared MPC with learned system models against model-free deep RL approaches for robust locomotion.
+Worked under [Matias Turkulainen](https://maturk.github.io/) and [Juho Kannala](https://users.aalto.fi/~kannalj1/) on 3D reconstruction. Built distributed training infrastructure for Gaussian Splatting using SLURM. Conducted systematic benchmarking and ablation studies across Gaussian Splatting pipelines.
+</div>
 
-**Hexo AI** — ML Intern  
-*Remote* | Feb 2023 – Apr 2023
+<div class="cv-entry">
+<div class="cv-header">
+<div class="cv-left">
+<strong>Technical University of Munich</strong>
+<span class="cv-location">Munich, Germany</span>
+</div>
+<span class="cv-date">Jun 2023 – Jul 2023</span>
+</div>
+
+<div class="cv-position">
+<span class="cv-role">Research Intern</span>
+</div>
+
+Researched system identification and deep RL for quadruped robot control under Hongpeng Cao and Marco Caccamo. Developed simulation models capturing robot dynamics and uncertainties. Compared MPC with learned system models against model-free deep RL approaches.
+</div>
+
+<div class="cv-entry">
+<div class="cv-header">
+<div class="cv-left">
+<strong>Hexo AI</strong>
+<span class="cv-location">Remote</span>
+</div>
+<span class="cv-date">Feb 2023 – Apr 2023</span>
+</div>
+
+<div class="cv-position">
+<span class="cv-role">ML Intern</span>
+</div>
 
 Built text-conditional latent diffusion models for product photography generation. Implemented image inpainting with textual conditioning from scratch. Delivered production-ready models as part of a 3-person team.
+</div>
 
-**64Squares** — ML Intern  
-*Remote* | Dec 2022 – Jan 2023
+<div class="cv-entry">
+<div class="cv-header">
+<div class="cv-left">
+<strong>64Squares</strong>
+<span class="cv-location">Remote</span>
+</div>
+<span class="cv-date">Dec 2022 – Jan 2023</span>
+</div>
 
-Developed contextual AI chatbots for B2B applications. Trained BERT and spaCy models with DIET classifier for intent and entity recognition. Built evaluation pipelines for stress testing and improving model resilience.
+<div class="cv-position">
+<span class="cv-role">ML Intern</span>
+</div>
+
+Developed contextual AI chatbots for B2B applications. Trained BERT and spaCy models with DIET classifier for intent and entity recognition. Built evaluation pipelines for stress testing.
+</div>
 
 ## Education
 
