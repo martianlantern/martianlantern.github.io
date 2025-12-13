@@ -461,3 +461,6 @@ void median_filterv4(
 
 This writeup only discusses fast median filter algorithms for generalized datatypes. However if the restrictions of general datatypes is removed and only considered uint8 datatype which most real world images are stored in even more speedup can be gained. For example [Huang's Algorithm](https://ieeexplore.ieee.org/document/1163188) uses a 256 bit histogram for storing the median buffer of V4 which can be very easily optimized to have constant time median search. [Median filtering by localization of median value](https://www.ripublication.com/ijaer18/ijaerv13n12_107.pdf) takes this a step further and also introduces a column histogram while [Perreault and Hebert](http://mesh.brown.edu/engn1610/refs/PerreaultHebert-tip2007.pdf) also uses a similar variant of column histogram to result in a constant time median filtering algorithm but only applicable to 256 bit images due to the nature of lookup based median computation. Finally [Moruto](https://cgenglab.github.io/en/publication/sigga22_wmatrix_median/) introduced the wavelet based constant time median filtering algorithm recently.
 
+---
+
+Discussion of this post on Hacker News: [link](https://news.ycombinator.com/item?id=46173882)
