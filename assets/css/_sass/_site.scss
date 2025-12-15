@@ -49,6 +49,18 @@ a {
 
 main { position: relative; }
 
+// Site tagline
+.site-tagline {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 2rem;
+  padding: 0 15px;
+  
+  em {
+    font-style: italic;
+  }
+}
+
 // Posts list - grohan.co style
 .posts-list {
   padding: 0 15px;
@@ -1135,6 +1147,10 @@ hr {
   body {
     background-color: #0d1117;
     color: #c9d1d9;
+  }
+  
+  .site-tagline {
+    color: #8b949e;
   }
   
   a {
