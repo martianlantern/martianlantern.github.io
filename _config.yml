@@ -18,4 +18,5 @@ owner:
 ga_id: #
 ga_username: #
 
-timezone: India/Delhi
+timezone: Asia/Kolkata
+future: true
