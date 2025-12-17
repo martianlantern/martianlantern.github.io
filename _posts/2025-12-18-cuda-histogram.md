@@ -3,7 +3,7 @@ layout: post
 title: CUDA Histogram Kernel
 date: 2025-12-18
 comments: false
-tags: [cuda, algorithm]
+tags: [cuda, optimization]
 archive: false
 ---
 
