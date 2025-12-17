@@ -956,65 +956,159 @@ hr {
 }
 
 // ============================================
-// CV PAGE - Clean Professional Resume Style
+// CV PAGE - Clean Resume Layout (Site Style)
 // ============================================
 .cv-page {
   max-width: 800px;
   font-size: 14px;
   line-height: 1.5;
-  color: #333;
+  color: #353535;
+  padding: 0;
   
-  // Section headers
-  h2 {
+  // Remove default page-content padding
+  &.page-content {
+    padding-top: 0;
+  }
+  
+  // Header section - centered name and contact
+  .cv-header-block {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e1e4e8;
+    
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0 0 0.6rem;
+      color: #353535;
+      letter-spacing: -0.5px;
+    }
+    
+    .cv-contact-links {
+      font-size: 14px;
+      color: #353535;
+      margin-bottom: 0.4rem;
+      
+      a {
+        color: #353535;
+        text-decoration: underline;
+        text-decoration-color: #ccc;
+        text-underline-offset: 2px;
+        
+        &:hover {
+          color: #000;
+          text-decoration-color: #666;
+        }
+      }
+      
+      .cv-diamond {
+        color: #888;
+        margin: 0 0.5rem;
+        font-size: 10px;
+      }
+    }
+    
+    .cv-webpage {
+      font-size: 13px;
+      color: #888;
+      
+      strong {
+        font-weight: bold;
+        color: #353535;
+      }
+      
+      a {
+        color: #353535;
+        text-decoration: underline;
+        text-decoration-color: #ccc;
+        
+        &:hover {
+          color: #000;
+          text-decoration-color: #666;
+        }
+      }
+    }
+  }
+  
+  // Section headers - with horizontal rule
+  h2, .cv-section {
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin: 2rem 0 0.8rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid #333;
-    color: #333;
+    padding: 0;
+    color: #353535;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #353535;
+    }
     
     &:first-of-type {
       margin-top: 0;
     }
   }
   
-  // Bullet lists
+  // Bullet lists - site style
   ul {
     margin: 0.3rem 0 0 0;
     padding-left: 1.1rem;
-    list-style-type: disc;
+    list-style-type: square;
     
     li {
-      font-size: 13px;
+      font-size: 14px;
       color: #444;
       line-height: 1.5;
       margin-bottom: 0.25rem;
       
       strong {
         font-weight: 600;
-        color: #333;
+        color: #353535;
+      }
+      
+      .achievement-date {
+        float: right;
+        font-size: 13px;
+        color: #888;
+        font-style: italic;
+        margin-left: 1rem;
       }
     }
   }
   
-  // Links in CV
+  // Links in CV - site style
   a {
-    color: #333;
+    color: #353535;
     text-decoration: underline;
-    text-decoration-color: #999;
+    text-decoration-color: #ccc;
+    text-underline-offset: 2px;
     
     &:hover {
       color: #000;
-      text-decoration-color: #333;
+      text-decoration-color: #666;
     }
+  }
+  
+  // Paragraphs
+  p {
+    margin: 0.3rem 0 0.5rem;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #444;
   }
 }
 
-// CV Entry block
+// CV Entry block - each job/project
 .cv-entry {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.25rem;
 }
 
 // Entry header - company/project name with date
@@ -1026,15 +1120,15 @@ hr {
   gap: 0.5rem;
   margin-bottom: 0.15rem;
   
-  strong {
-    font-size: 14px;
-    font-weight: 700;
-    color: #111;
+  .cv-company {
+    font-size: 15px;
+    font-weight: bold;
+    color: #353535;
   }
   
-  > .cv-date {
+  .cv-date {
     font-size: 13px;
-    color: #666;
+    color: #888;
     white-space: nowrap;
   }
 }
@@ -1042,16 +1136,52 @@ hr {
 .cv-left {
   display: flex;
   align-items: baseline;
-  gap: 0.3rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
 }
 
-.cv-links {
+.cv-location {
   font-size: 13px;
-  color: #666;
+  font-style: italic;
+  color: #888;
+  margin-left: 0.5rem;
+  
+  &::before {
+    content: '— ';
+  }
+}
+
+// Position/role line
+.cv-position {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 0.2rem;
+  
+  .cv-role {
+    font-size: 14px;
+    font-style: italic;
+    color: #555;
+  }
+  
+  .cv-date {
+    font-size: 13px;
+    color: #888;
+  }
+}
+
+// Guide/mentor line
+.cv-guide {
+  font-size: 13px;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.3rem;
   
   a {
-    color: #666;
+    color: #353535;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
     
     &:hover {
       color: #000;
@@ -1059,19 +1189,47 @@ hr {
   }
 }
 
-// Subtitle line - role/guide info
-.cv-subtitle {
+.cv-org-line {
   font-size: 13px;
+  font-style: italic;
   color: #555;
-  margin-bottom: 0.2rem;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
   
   .cv-org {
     font-weight: 600;
-    color: #444;
+    font-style: normal;
+    color: #353535;
+  }
+}
+
+// Project entry with links
+.project-entry {
+  .cv-header {
+    .cv-left {
+      gap: 0.5rem;
+    }
+    
+    .project-links {
+      font-size: 13px;
+      
+      a {
+        color: #353535;
+        margin-left: 0.3rem;
+      }
+    }
+    
+    .project-stars {
+      font-size: 12px;
+      color: #888;
+      font-style: normal;
+    }
+    
+    .project-tech {
+      font-size: 13px;
+      font-style: italic;
+      color: #888;
+    }
   }
 }
 
@@ -1085,37 +1243,46 @@ hr {
     align-items: baseline;
     margin-bottom: 0.15rem;
     
-    strong {
-      font-size: 14px;
-      font-weight: 700;
-      color: #111;
+    .edu-school {
+      font-size: 15px;
+      font-weight: bold;
+      color: #353535;
     }
     
     .edu-date {
       font-size: 13px;
-      color: #666;
+      color: #888;
     }
+  }
+  
+  .edu-degree {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    font-style: italic;
   }
   
   .edu-details {
     font-size: 13px;
-    color: #444;
+    color: #555;
     line-height: 1.5;
+    margin: 0.2rem 0 0;
   }
 }
 
-// Skills section
+// Skills section - description list style
 .skills-section {
   dl {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 0.3rem 1rem;
+    grid-template-columns: 110px 1fr;
+    gap: 0.4rem 1rem;
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
     
     dt {
-      font-weight: 700;
-      color: #333;
+      font-weight: 600;
+      color: #353535;
+      text-align: left;
     }
     
     dd {
@@ -1125,29 +1292,58 @@ hr {
   }
 }
 
-// Achievement items with date on right
+// Achievement/Scholastic items with date on right
 .achievement-item {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 1rem;
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+  
+  .achievement-text {
+    flex: 1;
+  }
   
   .achievement-date {
     font-size: 13px;
-    color: #666;
+    color: #888;
     white-space: nowrap;
     flex-shrink: 0;
   }
 }
 
-// Responsive
+// Responsive adjustments
 @media (max-width: 600px) {
+  .cv-page {
+    font-size: 13px;
+    
+    .cv-header-block h1 {
+      font-size: 26px;
+    }
+    
+    h2, .cv-section {
+      font-size: 10px;
+    }
+    
+    .cv-contact-links {
+      .cv-diamond {
+        display: none;
+      }
+      
+      a {
+        display: block;
+        margin: 0.2rem 0;
+      }
+    }
+  }
+  
   .cv-header {
     flex-direction: column;
     gap: 0.1rem;
   }
   
-  .cv-subtitle {
+  .cv-position {
     flex-direction: column;
     gap: 0.1rem;
   }
@@ -1160,6 +1356,12 @@ hr {
   .achievement-item {
     flex-direction: column;
     gap: 0.1rem;
+  }
+  
+  .cv-page ul li .achievement-date {
+    float: none;
+    display: block;
+    margin: 0.2rem 0 0;
   }
   
   .skills-section dl {
@@ -1406,20 +1608,59 @@ hr {
     }
   }
   
-  // CV page
+  // CV page - dark mode
   .cv-page {
     color: #c9d1d9;
     
-    h2 { 
+    .cv-header-block {
+      border-bottom-color: #30363d;
+      
+      h1 { color: #c9d1d9; }
+      
+      .cv-contact-links {
+        color: #c9d1d9;
+        
+        a { 
+          color: #c9d1d9;
+          text-decoration-color: #484f58;
+          
+          &:hover {
+            color: #fff;
+            text-decoration-color: #8b949e;
+          }
+        }
+        .cv-diamond { color: #484f58; }
+      }
+      
+      .cv-webpage {
+        color: #8b949e;
+        
+        strong { color: #c9d1d9; }
+        
+        a { 
+          color: #c9d1d9;
+          text-decoration-color: #484f58;
+        }
+      }
+    }
+    
+    h2, .cv-section {
       color: #c9d1d9;
-      border-bottom-color: #c9d1d9;
+      
+      &::after {
+        background: #c9d1d9;
+      }
     }
     
     ul li {
       color: #adbac7;
       
       strong { color: #c9d1d9; }
+      
+      .achievement-date { color: #8b949e; }
     }
+    
+    p { color: #adbac7; }
     
     a {
       color: #c9d1d9;
@@ -1433,28 +1674,47 @@ hr {
   }
   
   .cv-header {
-    strong { color: #c9d1d9; }
-    > .cv-date { color: #8b949e; }
+    .cv-company { color: #c9d1d9; }
+    .cv-date { color: #8b949e; }
   }
   
-  .cv-left .cv-links {
+  .cv-location { color: #8b949e; }
+  
+  .cv-position {
+    .cv-role { color: #adbac7; }
+    .cv-date { color: #8b949e; }
+  }
+  
+  .cv-guide {
     color: #8b949e;
     
     a { 
-      color: #8b949e;
-      &:hover { color: #c9d1d9; }
+      color: #c9d1d9;
+      
+      &:hover { color: #fff; }
     }
   }
   
-  .cv-subtitle {
+  .cv-org-line {
     color: #8b949e;
-    .cv-org { color: #adbac7; }
+    .cv-org { color: #c9d1d9; }
+  }
+  
+  .project-entry .cv-header {
+    .project-stars { color: #8b949e; }
+    .project-tech { color: #8b949e; }
+    .project-links a { color: #c9d1d9; }
   }
   
   .edu-entry {
-    .edu-header strong { color: #c9d1d9; }
+    .edu-header .edu-school { color: #c9d1d9; }
     .edu-date { color: #8b949e; }
-    .edu-details { color: #adbac7; }
+    .edu-degree { color: #adbac7; }
+    .edu-details { 
+      color: #8b949e;
+      
+      a { color: #c9d1d9; }
+    }
   }
   
   .skills-section dl {
@@ -1463,6 +1723,7 @@ hr {
   }
   
   .achievement-item {
+    color: #adbac7;
     .achievement-date { color: #8b949e; }
   }
   
@@ -1507,3 +1768,4 @@ hr {
     &:focus { border-bottom-color: #58a6ff; }
   }
 }
+
