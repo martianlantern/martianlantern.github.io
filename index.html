@@ -2,23 +2,13 @@
 layout: default
 ---
 <div class="col-sm-12">
-    <p class="site-tagline"><em>The benefit of not knowing what's impossible is that you sometimes try it anyway</em></p>
-    <div class="posts-list">
-        {% assign current_month = "" %}
+    <div class="posts-list-clean">
         {% for post in site.posts %}
             {% if post.archive == false %}
-                {% assign post_month = post.date | date: "%B %Y" %}
-                {% if post_month != current_month %}
-                    {% assign current_month = post_month %}
-                    <h3 class="month-heading">{{ post.date | date: "%b, %Y" }}</h3>
-                {% endif %}
-                <ul class="posts">
-                    <li>
-                        <a href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
-                        <hr>
-                        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d" }}</time>
-                    </li>
-                </ul>
+                <a href="{{ post.url | prepend: site.url }}" class="post-entry">
+                    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}:</time>
+                    <span class="post-title">{{ post.title }}</span>
+                </a>
             {% endif %}
         {% endfor %}
     </div>
