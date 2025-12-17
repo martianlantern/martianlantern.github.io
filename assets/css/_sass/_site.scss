@@ -909,50 +909,21 @@ hr {
 // ============================================
 // COOL STUFF PAGE
 // ============================================
-.cool-stuff-intro {
-  color: #666;
+.cool-stuff-tagline {
+  font-size: 14px;
+  color: #888;
   margin-bottom: 1.5rem;
+  padding: 0;
   font-style: italic;
 }
 
-.cool-stuff-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  
-  li {
-    padding: 0.6rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    
-    &:last-child {
-      border-bottom: none;
-    }
-    
-    a {
-      flex: 1;
-      text-decoration: none;
-      color: #353535;
-      
-      &:hover {
-        text-decoration: underline;
-        text-decoration-color: #999;
-      }
-    }
-    
-    .tag {
-      font-size: 11px;
-      color: #888;
-      background: #f5f5f5;
-      padding: 2px 8px;
-      border-radius: 3px;
-      text-transform: lowercase;
-      white-space: nowrap;
-    }
-  }
+.link-tag {
+  font-size: 12px;
+  color: #888;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  width: 105px;
+  text-transform: lowercase;
 }
 
 // ============================================
@@ -1589,23 +1560,10 @@ hr {
   .no-results { color: #8b949e; }
   
   // Cool stuff page
-  .cool-stuff-intro { color: #8b949e; }
+  .cool-stuff-tagline { color: #8b949e; }
   
-  .cool-stuff-list li {
-    border-bottom-color: #21262d;
-    
-    a {
-      color: #c9d1d9;
-      
-      &:hover {
-        color: #fff;
-      }
-    }
-    
-    .tag {
-      background: #21262d;
-      color: #8b949e;
-    }
+  .link-tag {
+    color: #8b949e;
   }
   
   // CV page - dark mode
