@@ -5,7 +5,16 @@ sass:
   style: :compressed
 
 markdown: kramdown
+highlighter: rouge
 mathjax: true
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: plaintext
+    block:
+      line_numbers: false
 
 url: https://martianlantern.github.io
 permalink: /:year/:month/:title/
