@@ -78,7 +78,7 @@ I graduated from <a href="https://www.iitb.ac.in/">IIT Bombay</a> with a B.Tech 
 <span class="cv-date">Jan – Jun 2025</span>
 </div>
 <p>Semester Exchange, School of Science</p>
-<p class="cv-detail">Ranked 3/380+ in Programming Parallel Computers<br>
+<p class="cv-detail">Ranked 3/380+ in Programming Parallel Computers Course<br>
 <a href="/assets/pdfs/ppc_lor.pdf">Letter of Recommendation</a><br>
 CPI: 10.0/10.0</p>
 </div>
@@ -88,101 +88,133 @@ CPI: 10.0/10.0</p>
 
 <div class="cv-item">
 <div class="cv-item-header">
-<strong>Sprinklr</strong> <span class="cv-location">Gurugram, India</span>
+<span class="cv-company"><strong>Sprinklr</strong> <span class="cv-location-inline">| Gurugram, India</span></span>
 <span class="cv-date">May 2024 – Present</span>
 </div>
-<p class="cv-role">Machine Learning Engineer <span class="cv-role-date">Aug 2025 – Present</span></p>
-<ul>
-<li>Building production ML infrastructure for real-time voice AI systems</li>
-<li>Architected optimized speech-to-text pipelines using vLLM with significant latency improvements</li>
-<li>Designed custom vLLM scheduler for priority-based request routing in STT workloads</li>
-<li>Leading development of end-to-end voice bots for real-time conversational AI</li>
-</ul>
-<p class="cv-role">Product Intern <span class="cv-role-date">May – Jul 2024</span></p>
-<ul>
-<li>Evaluated unified speech-to-speech models against traditional STT→LLM→TTS pipelines</li>
-<li>Benchmarked models across latency, quality, and cost; delivered cost-effective solution</li>
-<li><em>Received Pre-Placement Offer</em></li>
-</ul>
+
+<div class="cv-subsection">
+<div class="cv-sub-item">
+<span class="cv-sub-role">Machine Learning Engineer</span>
+<span class="cv-sub-date">Aug 2025 - Present</span>
+<p class="cv-sub-detail">Building real time voice bot infrastructure. Optimized STT pipelines with vLLM and implemented custom scheduler for priority based request routing. Working on end to end voice bots for conversational AI and their deployment pipelines</p>
+</div>
+<div class="cv-sub-item">
+<span class="cv-sub-role">Product Intern</span>
+<span class="cv-sub-date">May - Jul 2024</span>
+<p class="cv-sub-detail">Benchmarked audio codecs for use in voice agent pipielines. Built a unified voice bot prototype for ASR and TTS applications achieving WER 8.9%, ~300ms latency. Received pre placement offer (PPO)</p>
+</div>
+</div>
 </div>
 
 <div class="cv-item">
 <div class="cv-item-header">
-<strong>Aalto Vision Lab</strong> <span class="cv-location">Helsinki, Finland</span>
-<span class="cv-date">Jan – Jun 2025</span>
+<span class="cv-company"><strong>Aalto Vision Lab</strong> <span class="cv-location-inline">| Helsinki, Finland</span></span>
+<span class="cv-date">Jan – Jul 2025</span>
 </div>
 <p class="cv-role">Research Assistant under <a href="https://maturk.github.io/">Matias Turkulainen</a> and <a href="https://users.aalto.fi/~kannalj1/">Juho Kannala</a></p>
-<ul>
-<li>Designed scalable multi-GPU training pipelines for feedforward gaussian splatting on SLURM</li>
-<li>Profiled and removed performance bottlenecks, increasing GPU utilization</li>
-<li>Integrated pose refinement and adaptive pruning, improving render quality</li>
-</ul>
+<p class="cv-desc">Wrote multi GPU training scripts for feedforward gaussian splatting on SLURM clusters. Profiled and optimized training kernels for better GPU utilization. Benchmarked and ablated various optimization techniques for feedforward gaussian splatting</p>
 </div>
 
 <div class="cv-item">
 <div class="cv-item-header">
-<strong>Technical University of Munich</strong> <span class="cv-location">Munich, Germany</span>
+<span class="cv-company"><strong>Technical University of Munich</strong> <span class="cv-location-inline">| Munich, Germany</span></span>
 <span class="cv-date">Jun – Jul 2023</span>
 </div>
-<p class="cv-role">Research Intern under <a href="https://hp-cao.github.io/hongispage/">Hongpeng Cao</a> and <a href="https://rtsl.cps.mw.tum.de/personal_page/mcaccamo/">Marco Caccamo</a></p>
-<ul>
-<li>Developed system identification techniques for quadruped robot dynamics modeling</li>
-<li>Implemented and compared system models for MPC against model-free DRL approaches</li>
-</ul>
+<p class="cv-role">Summer Research Intern | Quadruped Robotics under <a href="https://hp-cao.github.io/hongispage/">Hongpeng Cao</a> and <a href="https://rtsl.cps.mw.tum.de/personal_page/mcaccamo/">Marco Caccamo</a></p>
+<p class="cv-desc">Developed system identification models for quadruped robot dynamics. Implemented MPC based control and compared against model free deep RL approaches in simulation</p>
 </div>
 
 <div class="cv-item">
 <div class="cv-item-header">
-<strong>Hexo AI</strong> <span class="cv-location">Remote</span>
-<span class="cv-date">Feb 2023 – Feb 2024</span>
+<span class="cv-company"><strong>Hexo AI</strong> <span class="cv-location-inline">| Remote</span></span>
+<span class="cv-date">Feb – Apr 2023</span>
 </div>
-<p class="cv-role">ML Intern — Diffusion Models & LLMs</p>
-<ul>
-<li>Built text-conditional latent diffusion model for product image generation</li>
-<li>Delivered robust image inpainting models with textual conditioning</li>
-</ul>
+<p class="cv-role">ML Intern | Diffusion Models</p>
+<p class="cv-desc">Built a text conditional latent diffusion model for image generation. Worked on image inpainting with textual conditioning in a team of 3</p>
+</div>
+
+<div class="cv-item">
+<div class="cv-item-header">
+<span class="cv-company"><strong>64Squares</strong> <span class="cv-location-inline">| Remote</span></span>
+<span class="cv-date">Dec 2022 – Jan 2023</span>
+</div>
+<p class="cv-role">ML Intern | Contextual Chatbots</p>
+<p class="cv-desc">Trained BERT and spaCy models with DIET classifier for intent and entity extraction. Stress tested chatbot models for stability</p>
 </div>
 
 <h2>Projects</h2>
 
 <div class="cv-item">
 <div class="cv-item-header">
-<strong><a href="https://github.com/martianlantern/ThinkMesh">ThinkMesh</a></strong> <span class="cv-stars">★ 259</span>
-<span class="cv-date">2024</span>
+<span class="cv-project-title"><strong>ThinkMesh</strong> | <a href="https://github.com/martianlantern/ThinkMesh">code</a> <span class="cv-github-stars">GitHub ★ 274</span></span>
+<span class="cv-date">Sep 2025</span>
 </div>
-<p>Parallel reasoning framework for LLMs implementing DeepConf, Self-Consistency, Debate, Tree of Thoughts, and Graph reasoning strategies with configurable compute budgets.</p>
+<p>Parallel reasoning framework for LLMs implementing <a href="https://arxiv.org/abs/2203.11171">Self-Consistency</a>, <a href="https://arxiv.org/abs/1805.00899">Debate</a>, <a href="https://arxiv.org/abs/2305.10601">Tree of Thoughts</a>, and <a href="https://arxiv.org/abs/2308.09687">Graph of Thoughts</a> strategies with configurable compute budgets.</p>
 </div>
 
 <div class="cv-item">
+<div class="cv-project-row">
+<div class="cv-project-content">
 <div class="cv-item-header">
-<strong>Gaussian Masked Autoencoders</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/gaussian-mae">code</a></span>
-<span class="cv-date">Feb – Mar 2025</span>
+<span class="cv-project-title"><strong>Gaussian Masked Autoencoders</strong> | <a href="https://github.com/darshanmakwana412/gaussian-mae">code</a></span>
+<span class="cv-date">Feb - Mar 2025</span>
 </div>
 <p>Replicated gaussian MAE paper using 3D Gaussian splats as intermediate latent representation, enabling zero-shot capabilities.</p>
 </div>
-
-<div class="cv-item">
-<div class="cv-item-header">
-<strong>Sparse Voxel Multi-View Reconstruction</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction">code</a> · <a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction/blob/main/report.pdf">report</a></span>
-<span class="cv-date">Sep – Nov 2024</span>
+<img src="/assets/projects/gmae.png" alt="Gaussian MAE" class="cv-project-image">
 </div>
-<p>3D reconstruction pipeline: ArUco calibration, feature extraction, pose recovery, multi-resolution voxelization, and volumetric fusion.</p>
 </div>
 
 <div class="cv-item">
+<div class="cv-project-row">
+<div class="cv-project-content">
 <div class="cv-item-header">
-<strong>Unsupervised Structural Optimization</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/structure_optimization">code</a> · <a href="https://github.com/darshanmakwana412/structure_optimization/blob/main/main.pdf">report</a></span>
-<span class="cv-date">Jan – Apr 2024</span>
+<span class="cv-project-title"><strong>Minimal 2D Gaussian Splatting</strong> | <a href="https://github.com/darshanmakwana412/mings">code</a></span>
+<span class="cv-date">Dec 2024</span>
 </div>
-<p>Framework for structural optimization using iterative solvers and topological evolution via NEAT.</p>
+<p>Implementation of gaussian splatting for 2D images using tile-based differential rasterization with custom Triton kernels.</p>
+</div>
+<img src="/assets/projects/toucan.gif" alt="Minimal 2D Gaussian Splatting" class="cv-project-image">
+</div>
 </div>
 
 <div class="cv-item">
+<div class="cv-project-row">
+<div class="cv-project-content">
 <div class="cv-item-header">
-<strong>Fractal Curves for Tool Path Generation</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/fractal">code</a> · <a href="https://github.com/darshanmakwana412/fractal/blob/main/draft/tool_path_planning.pdf">report</a></span>
-<span class="cv-date">Aug – Nov 2023</span>
+<span class="cv-project-title"><strong>Multi-View Reconstruction</strong> | <a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction">code</a> | <a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction/blob/main/report.pdf">report</a></span>
+<span class="cv-date">Sep - Nov 2024</span>
+</div>
+<p>3D reconstruction from images using volumetric graph cuts on visual hulls followed by ray casting for shading.</p>
+</div>
+<img src="/assets/projects/mvs.gif" alt="Multi-View Reconstruction" class="cv-project-image">
+</div>
+</div>
+
+<div class="cv-item">
+<div class="cv-project-row">
+<div class="cv-project-content">
+<div class="cv-item-header">
+<span class="cv-project-title"><strong>Structural Optimization</strong> | <a href="https://github.com/darshanmakwana412/structure_optimization">code</a> | <a href="https://github.com/darshanmakwana412/structure_optimization/blob/main/main.pdf">report</a></span>
+<span class="cv-date">Jan - Apr 2024</span>
+</div>
+<p>Gradient-based optimization framework using matrix formulation to compute optimal spatial configuration of structures under loading.</p>
+</div>
+<img src="/assets/projects/struct_optim.gif" alt="Structural Optimization" class="cv-project-image">
+</div>
+</div>
+
+<div class="cv-item">
+<div class="cv-project-row">
+<div class="cv-project-content">
+<div class="cv-item-header">
+<span class="cv-project-title"><strong>Fractal Curves for Tool Path Planning</strong> | <a href="https://github.com/darshanmakwana412/fractal">code</a> | <a href="https://github.com/darshanmakwana412/fractal/blob/main/draft/tool_path_planning.pdf">report</a></span>
+<span class="cv-date">Aug - Nov 2023</span>
 </div>
 <p>Fractal curve algorithms for tool path planning in layered 3D printing with recursive decomposition.</p>
+</div>
+<img src="/assets/projects/fractal.png" alt="Fractal Curves" class="cv-project-image">
+</div>
 </div>
 
 </div>
