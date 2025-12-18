@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cool Links
+title: Bookmarks
 ---
 
 <div class="col-sm-12">
@@ -8,7 +8,7 @@ title: Cool Links
         {{ page.title }}
     </div>
     <div class="posts-list-clean">
-        <p class="cool-stuff-tagline">Interesting things I've found on the internet.</p>
+        <p class="cool-stuff-tagline">Interesting things I've found on the internet</p>
         
         <a href="https://jessylin.com/2025/10/20/continual-learning/" class="post-entry" target="_blank">
             <span class="post-title">The continual learning problem</span>

@@ -460,9 +460,6 @@ ul { list-style-type: square; }
 }
 
 #twitter-ic { color: #1da1f2 !important; }
-
-#git-ic { color: #353535 !important; }
-
 #rss-ic { color: #f26522 !important; }
 
 .top {
@@ -470,8 +467,11 @@ ul { list-style-type: square; }
   background-color: #fff;
   font-weight: bold !important;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   
-  a {
+  > a {
     color: #353535;
     text-decoration: none;
     
@@ -481,17 +481,46 @@ ul { list-style-type: square; }
       text-underline-offset: 2px;
     }
   }
+}
+
+// Header icons - minimal, elegant
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.theme-toggle,
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #555;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
   
-  span {
-    a { 
-      padding-left: 8px;
-      color: #353535;
-      
-      &:hover {
-        text-decoration: none;
-      }
-    }
+  svg {
+    display: block;
   }
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+  }
+}
+
+.theme-toggle {
+  .sun-icon { display: none; }
+  .moon-icon { display: block; }
+}
+
+.github-link {
+  text-decoration: none !important;
 }
 
 // Content alignment - match with nav
@@ -927,135 +956,296 @@ hr {
 }
 
 // ============================================
-// CV PAGE - Clean Resume Layout (Site Style)
+// CV PAGE - Clean Academic Resume
 // ============================================
 .cv-page {
-  max-width: 800px;
+  max-width: 750px;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #353535;
-  padding: 0;
   
-  // Remove default page-content padding
   &.page-content {
     padding-top: 0;
   }
   
-  // Header section - centered name and contact
-  .cv-header-block {
-    text-align: center;
+  // Hero section - about + photo
+  .cv-hero {
+    display: flex;
+    gap: 2rem;
     margin-bottom: 2rem;
     padding-bottom: 1.5rem;
     border-bottom: 1px solid #e1e4e8;
+  }
+  
+  .cv-hero-content {
+    flex: 1;
     
     h1 {
-      font-size: 32px;
+      font-size: 28px;
       font-weight: bold;
-      margin: 0 0 0.6rem;
+      margin: 0 0 0.75rem;
       color: #353535;
       letter-spacing: -0.5px;
     }
     
-    .cv-contact-links {
+    .cv-bio {
       font-size: 14px;
-      color: #353535;
-      margin-bottom: 0.4rem;
+      line-height: 1.6;
+      color: #444;
+      margin: 0 0 0.6rem;
       
       a {
         color: #353535;
         text-decoration: underline;
         text-decoration-color: #ccc;
-        text-underline-offset: 2px;
         
         &:hover {
           color: #000;
           text-decoration-color: #666;
         }
       }
+    }
+  }
+  
+  .cv-contact-info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .cv-contact-item {
+    font-size: 13px;
+    display: flex;
+    align-items: baseline;
+    
+    .cv-contact-label {
+      width: 60px;
+      color: #888;
+      flex-shrink: 0;
+    }
+    
+    a {
+      color: #353535;
+      text-decoration: none;
       
-      .cv-diamond {
-        color: #888;
-        margin: 0 0.5rem;
-        font-size: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .cv-hero-photo {
+    width: 210px;
+    height: 210px;
+    object-fit: cover;
+    // border-radius: 4px;
+    // flex-shrink: 0;
+  }
+  
+  // Sections
+  .cv-section {
+    margin-bottom: 1.5rem;
+    
+    h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #353535;
+      margin: 0 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  
+  // CV Items (entries)
+  .cv-item {
+    margin-bottom: 1rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  // Education subsections (TA, Team Lead, etc.)
+  .cv-subsection {
+    margin-top: 0.6rem;
+    padding-left: 0.8rem;
+    border-left: 2px solid #e1e4e8;
+  }
+  
+  .cv-sub-item {
+    margin-bottom: 0.4rem;
+    padding: 0.2rem 0;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .cv-sub-role {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .cv-sub-date {
+    font-size: 12px;
+    color: #888;
+    margin-left: 0.5rem;
+  }
+  
+  .cv-sub-detail {
+    font-size: 12px;
+    color: #666;
+    margin: 0.15rem 0 0;
+  }
+  
+  .cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.1rem;
+    
+    strong {
+      font-size: 14px;
+      font-weight: 700;
+      color: #353535;
+      
+      a {
+        color: #353535;
+        text-decoration: none;
+        
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
     
-    .cv-webpage {
+    .cv-location {
+      font-size: 13px;
+      font-weight: 400;
+      color: #888;
+      font-style: italic;
+      
+      &::before {
+        content: '— ';
+        color: #ccc;
+      }
+    }
+    
+    .cv-date {
       font-size: 13px;
       color: #888;
-      
-      strong {
-        font-weight: bold;
-        color: #353535;
-      }
+      white-space: nowrap;
+    }
+    
+    .cv-stars {
+      font-size: 12px;
+      color: #888;
+      margin-left: 0.5rem;
+    }
+    
+    .cv-code-links {
+      font-size: 12px;
+      color: #888;
+      margin-left: 0.3rem;
       
       a {
-        color: #353535;
-        text-decoration: underline;
-        text-decoration-color: #ccc;
+        color: #666;
+        text-decoration: none;
         
         &:hover {
-          color: #000;
-          text-decoration-color: #666;
+          color: #353535;
+          text-decoration: underline;
         }
       }
     }
   }
   
-  // Section headers - with horizontal rule
-  h2, .cv-section {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 2rem 0 0.8rem;
-    padding: 0;
-    color: #353535;
-    border: none;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  .cv-role {
+    font-size: 13px;
+    font-style: italic;
+    color: #555;
+    margin: 0.1rem 0 0.2rem;
     
-    &::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #353535;
-    }
-    
-    &:first-of-type {
-      margin-top: 0;
+    .cv-role-date {
+      float: right;
+      font-style: normal;
+      color: #888;
+      font-size: 12px;
     }
   }
   
-  // Bullet lists - site style
+  .cv-detail {
+    font-size: 13px;
+    color: #666;
+    margin: 0;
+  }
+  
+  // Paragraphs
+  p {
+    margin: 0.15rem 0 0.4rem;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+  // Lists
   ul {
-    margin: 0.3rem 0 0 0;
-    padding-left: 1.1rem;
+    margin: 0.2rem 0 0;
+    padding-left: 1rem;
     list-style-type: square;
     
     li {
-      font-size: 14px;
+      font-size: 13px;
       color: #444;
-      line-height: 1.5;
-      margin-bottom: 0.25rem;
+      line-height: 1.45;
+      margin-bottom: 0.15rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
       
       strong {
         font-weight: 600;
         color: #353535;
       }
       
-      .achievement-date {
-        float: right;
-        font-size: 13px;
-        color: #888;
+      em {
         font-style: italic;
-        margin-left: 1rem;
+        color: #555;
       }
     }
   }
   
-  // Links in CV - site style
+  // Inline dates in lists
+  .cv-date-inline {
+    float: right;
+    font-size: 12px;
+    color: #888;
+    margin-left: 1rem;
+  }
+  
+  // Skills section
+  .cv-skills {
+    p {
+      margin: 0.2rem 0;
+      font-size: 13px;
+      
+      strong {
+        font-weight: 600;
+        color: #353535;
+        display: inline-block;
+        width: 80px;
+      }
+    }
+  }
+  
+  // Links
   a {
     color: #353535;
     text-decoration: underline;
@@ -1067,307 +1257,57 @@ hr {
       text-decoration-color: #666;
     }
   }
-  
-  // Paragraphs
-  p {
-    margin: 0.3rem 0 0.5rem;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #444;
-  }
 }
 
-// CV Entry block - each job/project
-.cv-entry {
-  margin-bottom: 1.25rem;
-}
-
-// Entry header - company/project name with date
-.cv-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 0.15rem;
-  
-  .cv-company {
-    font-size: 15px;
-    font-weight: bold;
-    color: #353535;
-  }
-  
-  .cv-date {
-    font-size: 13px;
-    color: #888;
-    white-space: nowrap;
-  }
-}
-
-.cv-left {
-  display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-}
-
-.cv-location {
-  font-size: 13px;
-  font-style: italic;
-  color: #888;
-  margin-left: 0.5rem;
-  
-  &::before {
-    content: '— ';
-  }
-}
-
-// Position/role line
-.cv-position {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  margin-bottom: 0.2rem;
-  
-  .cv-role {
-    font-size: 14px;
-    font-style: italic;
-    color: #555;
-  }
-  
-  .cv-date {
-    font-size: 13px;
-    color: #888;
-  }
-}
-
-// Guide/mentor line
-.cv-guide {
-  font-size: 13px;
-  font-style: italic;
-  color: #555;
-  margin-bottom: 0.3rem;
-  
-  a {
-    color: #353535;
-    text-decoration: underline;
-    text-decoration-color: #ccc;
-    
-    &:hover {
-      color: #000;
-    }
-  }
-}
-
-.cv-org-line {
-  font-size: 13px;
-  font-style: italic;
-  color: #555;
-  display: flex;
-  justify-content: space-between;
-  
-  .cv-org {
-    font-weight: 600;
-    font-style: normal;
-    color: #353535;
-  }
-}
-
-// Project entry with links
-.project-entry {
-  .cv-header {
-    .cv-left {
-      gap: 0.5rem;
-    }
-    
-    .project-links {
-      font-size: 13px;
-      
-      a {
-        color: #353535;
-        margin-left: 0.3rem;
-      }
-    }
-    
-    .project-stars {
-      font-size: 12px;
-      color: #888;
-      font-style: normal;
-    }
-    
-    .project-tech {
-      font-size: 13px;
-      font-style: italic;
-      color: #888;
-    }
-  }
-}
-
-// Education entries
-.edu-entry {
-  margin-bottom: 1rem;
-  
-  .edu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.15rem;
-    
-    .edu-school {
-      font-size: 15px;
-      font-weight: bold;
-      color: #353535;
-    }
-    
-    .edu-date {
-      font-size: 13px;
-      color: #888;
-    }
-  }
-  
-  .edu-degree {
-    font-size: 14px;
-    color: #444;
-    margin: 0;
-    font-style: italic;
-  }
-  
-  .edu-details {
-    font-size: 13px;
-    color: #555;
-    line-height: 1.5;
-    margin: 0.2rem 0 0;
-  }
-}
-
-// Skills section - description list style
-.skills-section {
-  dl {
-    display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 0.4rem 1rem;
-    margin: 0;
-    font-size: 14px;
-    
-    dt {
-      font-weight: 600;
-      color: #353535;
-      text-align: left;
-    }
-    
-    dd {
-      margin: 0;
-      color: #444;
-    }
-  }
-}
-
-// Achievement/Scholastic items with date on right
-.achievement-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  font-size: 14px;
-  margin-bottom: 0.25rem;
-  
-  .achievement-text {
-    flex: 1;
-  }
-  
-  .achievement-date {
-    font-size: 13px;
-    color: #888;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-}
-
-// Responsive adjustments
+// Responsive
 @media (max-width: 600px) {
   .cv-page {
-    font-size: 13px;
-    
-    .cv-header-block h1 {
-      font-size: 26px;
+    .cv-hero {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
     }
     
-    h2, .cv-section {
-      font-size: 10px;
+    .cv-hero-photo {
+      width: 120px;
+      height: 120px;
     }
     
-    .cv-contact-links {
-      .cv-diamond {
-        display: none;
-      }
+    .cv-contact-info {
+      align-items: center;
+    }
+    
+    .cv-contact-item {
+      justify-content: center;
       
-      a {
-        display: block;
-        margin: 0.2rem 0;
+      .cv-contact-label {
+        width: auto;
+        margin-right: 0.5rem;
       }
     }
-  }
-  
-  .cv-header {
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-  
-  .cv-position {
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-  
-  .edu-entry .edu-header {
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-  
-  .achievement-item {
-    flex-direction: column;
-    gap: 0.1rem;
-  }
-  
-  .cv-page ul li .achievement-date {
-    float: none;
-    display: block;
-    margin: 0.2rem 0 0;
-  }
-  
-  .skills-section dl {
-    grid-template-columns: 1fr;
     
-    dt {
-      margin-top: 0.5rem;
-      
-      &:first-of-type {
-        margin-top: 0;
-      }
+    .cv-item-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+    
+    .cv-role .cv-role-date {
+      float: none;
+      display: block;
+      margin-top: 0.1rem;
+    }
+    
+    .cv-date-inline {
+      float: none;
+      display: block;
+      margin: 0.1rem 0 0;
     }
   }
 }
 
-// ============================================
-// DARK MODE TOGGLE BUTTON
-// ============================================
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px 8px;
-  font-size: 18px;
-  color: #353535;
-  transition: color 0.2s ease;
-  vertical-align: middle;
-  
-  &:hover {
-    color: #000;
-  }
-  
-  .sun-icon { display: none; }
-  .moon-icon { display: inline; }
-}
+// (Theme toggle styles moved to .header-icons section above)
 
 // ============================================
 // DARK MODE STYLES
@@ -1570,64 +1510,72 @@ hr {
   .cv-page {
     color: #c9d1d9;
     
-    .cv-header-block {
+    .cv-hero {
       border-bottom-color: #30363d;
-      
+    }
+    
+    .cv-hero-content {
       h1 { color: #c9d1d9; }
       
-      .cv-contact-links {
-        color: #c9d1d9;
+      .cv-bio {
+        color: #adbac7;
         
-        a { 
+        a {
           color: #c9d1d9;
           text-decoration-color: #484f58;
-          
-          &:hover {
-            color: #fff;
-            text-decoration-color: #8b949e;
-          }
-        }
-        .cv-diamond { color: #484f58; }
-      }
-      
-      .cv-webpage {
-        color: #8b949e;
-        
-        strong { color: #c9d1d9; }
-        
-        a { 
-          color: #c9d1d9;
-          text-decoration-color: #484f58;
+          &:hover { color: #fff; }
         }
       }
     }
     
-    h2, .cv-section {
-      color: #c9d1d9;
-      
-      &::after {
-        background: #c9d1d9;
+    .cv-contact-item {
+      .cv-contact-label { color: #6e7681; }
+      a { 
+        color: #c9d1d9;
+        &:hover { color: #fff; }
       }
     }
+    
+    .cv-section h2 {
+      color: #c9d1d9;
+      border-bottom-color: #484f58;
+    }
+    
+    .cv-item-header {
+      strong { color: #c9d1d9; }
+      strong a { color: #c9d1d9; }
+      .cv-location { color: #8b949e; }
+      .cv-date { color: #8b949e; }
+      .cv-stars { color: #8b949e; }
+      .cv-code-links a { color: #8b949e; }
+    }
+    
+    .cv-role { color: #adbac7; }
+    .cv-detail { color: #8b949e; }
+    .cv-date-inline { color: #8b949e; }
+    
+    // Education subsections dark mode
+    .cv-subsection {
+      border-left-color: #30363d;
+    }
+    .cv-sub-role { color: #adbac7; }
+    .cv-sub-date { color: #8b949e; }
+    .cv-sub-detail { color: #8b949e; }
+    
+    p { color: #adbac7; }
     
     ul li {
       color: #adbac7;
-      
       strong { color: #c9d1d9; }
-      
-      .achievement-date { color: #8b949e; }
+      em { color: #8b949e; }
     }
     
-    p { color: #adbac7; }
+    .cv-skills p strong { color: #c9d1d9; }
     
     a {
       color: #c9d1d9;
       text-decoration-color: #484f58;
-      
-      &:hover {
-        color: #fff;
-        text-decoration-color: #8b949e;
-      }
+      &:hover { color: #fff; }
     }
   }
   
@@ -1699,15 +1647,19 @@ hr {
   
   .link { color: #8b949e; }
   
-  #git-ic { color: #c9d1d9 !important; }
+  // Header icons in dark mode
+  .theme-toggle,
+  .github-link {
+    color: #8b949e;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+  }
   
-  // Theme toggle in dark mode
   .theme-toggle {
-    color: #c9d1d9;
-    
-    &:hover { color: #fff; }
-    
-    .sun-icon { display: inline; }
+    .sun-icon { display: block; }
     .moon-icon { display: none; }
   }
   

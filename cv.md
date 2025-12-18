@@ -1,261 +1,189 @@
 ---
 layout: default
-title: Curriculum Vitae
+title: CV
 permalink: /cv/
 ---
 
 <div class="col-sm-12">
 <div class="page-content cv-page">
 
-<h2>Experience</h2>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Sprinklr</span>
-<span class="cv-date">May 2024 – Present</span>
+<div class="cv-hero">
+<div class="cv-hero-content">
+<p class="cv-bio">
+My name is Darshan Makwana and I'm a Machine Learning Engineer at <a href="https://www.sprinklr.com/">Sprinklr</a> working on LLM Sys and real time voice AI systems. Previously, I was a Research Assistant at <a href="https://users.aalto.fi/~kannalj1/">Aalto Vision Lab</a> working on 3D Gaussian Splatting and also did research internships at <a href="https://www.tum.de/en/">TU Munich</a> on quadruped robotics and <a href="https://www.hexo.ai/">Hexo AI</a> on diffusion models.
+</p>
+<p class="cv-bio">
+I graduated from <a href="https://www.iitb.ac.in/">IIT Bombay</a> with a B.Tech in Mechanical Engineering and Dual Minor in Computer Science and Machine Learning. My interests span computer vision, 3D reconstruction, and efficient ML systems
+</p>
+<div class="cv-contact-info">
+<div class="cv-contact-item">
+<span class="cv-contact-label">Email</span>
+<a href="mailto:martianlantern@gmail.com">martianlantern@gmail.com</a>
 </div>
-<div class="cv-position">
-<span class="cv-role">Machine Learning Engineer</span>
-<span class="cv-date">Aug 2025 – Present</span>
+<div class="cv-contact-item">
+<span class="cv-contact-label">GitHub</span>
+<a href="https://github.com/martianlantern">github.com/martianlantern</a>
 </div>
-<p>Building production ML infrastructure for real-time voice AI. Architected and deployed optimized speech-to-text pipelines using vLLM with significant latency improvements. Designed a custom vLLM scheduler for priority-based request routing in STT workloads, now running in production. Currently leading development of end-to-end voice bots for real-time conversational AI.</p>
-<div class="cv-position">
-<span class="cv-role">Product Intern</span>
-<span class="cv-date">May 2024 – Jul 2024</span>
+<div class="cv-contact-item">
+<span class="cv-contact-label">Website</span>
+<a href="https://martianlantern.github.io">martianlantern.github.io</a>
 </div>
-<p>Evaluated unified speech-to-speech models against traditional STT→LLM→TTS pipelines. Benchmarked open-source and proprietary models across latency, quality, and cost dimensions. Delivered a cost-effective solution competitive with closed-source alternatives. <em>Received Pre-Placement Offer.</em></p>
 </div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Aalto Vision Lab</span>
-<span class="cv-date">Jan 2025 – Jun 2025</span>
 </div>
-<div class="cv-guide">Research Assistant under <a href="https://maturk.github.io/">Matias Turkulainen</a> and <a href="https://users.aalto.fi/~kannalj1/">Juho Kannala</a> <span class="cv-location">Helsinki, Finland</span></div>
-<ul>
-<li>Designed and deployed scalable multi GPU training pipelines for feedforward gaussian splatting on SLURM cluster</li>
-<li>Profiled and removed performance bottlenecks in training pipelines and kernels, increasing GPU utilization</li>
-<li>Collaborated on integrating pose refinement and adaptive pruning, improving render quality while lowering splats</li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Technical University of Munich</span>
-<span class="cv-date">Jun 2023 – Jul 2023</span>
-</div>
-<div class="cv-guide">Research Intern under <a href="https://hp-cao.github.io/hongispage/">Hongpeng Cao</a> and <a href="https://rtsl.cps.mw.tum.de/personal_page/mcaccamo/">Marco Caccamo</a> <span class="cv-location">Munich, Germany</span></div>
-<ul>
-<li>Conducted <strong>literature review</strong> on system identification techniques and their applications to <strong>quadruped robots</strong></li>
-<li>Developed and refined a system model, leveraging <strong>system identification techniques</strong> developed in the control domain to accurately represent the <strong>dynamics</strong> and <strong>uncertainties</strong> of a quadruped robot in the simulation</li>
-<li>Implemented various approaches to obtain system models for <strong>MPC</strong>, and compared them against <strong>model free DRL</strong></li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Hexo AI</span>
-<span class="cv-date">Feb 2023 – Apr 2023</span>
-</div>
-<div class="cv-guide">ML Intern under <a href="https://www.linkedin.com/in/vigneshbaskaran0123/">Vignesh Baskaran</a> <span class="cv-location">Remote</span></div>
-<ul>
-<li>Conducted literature review of latent diffusion models by comparing their architecture basis degree of <strong>photorealism</strong></li>
-<li>Devised a text <strong>conditional latent diffusion</strong> model from scratch for generation of flowers from textual captions</li>
-<li>Worked in a team of <strong>3</strong> to deliver <strong>robust and high fidelity</strong> image inpainting models with <strong>textual conditioning</strong></li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">64Squares</span>
-<span class="cv-date">Dec 2022 – Jan 2023</span>
-</div>
-<div class="cv-guide">ML Intern under <a href="https://www.linkedin.com/in/piyush-jaiswal-1405/">Piyush Jaiswal</a> <span class="cv-location">Remote</span></div>
-<ul>
-<li>Developed methods to analyze <strong>unstructured</strong> data on human dialogues improving natural language unit predictions</li>
-<li>Trained <strong>BERT</strong> and <strong>spaCy</strong> language models with <strong>DIET</strong> classifier for robust and accurate intent and entity predictions</li>
-<li>Performed stress testing on various proprietary models to determine their <strong>stability</strong> and improve their <strong>resilience</strong></li>
-</ul>
+<img src="/assets/images/darshan.png" alt="Darshan Makwana" class="cv-hero-photo">
 </div>
 
 <h2>Education</h2>
 
-<div class="edu-entry">
-<div class="edu-header">
-<span class="edu-school">Aalto University, Finland</span>
-<span class="edu-date">Jan 2025 – Jun 2025</span>
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Indian Institute of Technology, Bombay</strong>
+<span class="cv-date">2021 - 2025</span>
 </div>
-<div class="edu-degree">Semester Exchange in School of Science</div>
-<div class="edu-details">
-Sem Ex CPI: 10.0/10.0<br>
-Ranked 3/380+ in "Programming Parallel Computers (PPC)" (Instructor: <a href="https://jukkasuomela.fi/">Jukka Suomela</a>)<br>
-<a href="/assets/pdfs/ppc_lor.pdf">Letter of Recommendation</a>
+<p>B.Tech in Mechanical Engineering | Minor in Computer Science and Data Science</p>
+<p class="cv-detail">Major CPI: 8.82/10 · Minor CPI: 10/10</p>
+
+<div class="cv-subsection">
+<div class="cv-sub-item">
+<span class="cv-sub-role">Team Lead, Inter IIT Tech Meet 13.0</span>
+<span class="cv-sub-date">Dec 2024</span>
+<p class="cv-sub-detail">Led team of 13 for Adobe deepfake detection challenge to 2nd runner up in task 2</p>
+</div>
+<div class="cv-sub-item">
+<span class="cv-sub-role">Teaching Assistant</span>
+<span class="cv-sub-date">Apr - Jun 2023</span>
+<p class="cv-sub-detail">PH 112 & MA 108 | Conducting weekly tutorials and grading assignments for 40+ students </p>
+</div>
+<div class="cv-sub-item">
+<span class="cv-sub-role">Machine Learning Mentor</span>
+<span class="cv-sub-date">May - Jul 2023</span>
+<p class="cv-sub-detail">Mentoring 7 students during the summers to pick up pace in ML</p>
+</div>
+<div class="cv-sub-item">
+<span class="cv-sub-role">Core Team Member, DAV</span>
+<span class="cv-sub-date">Jul 2022 - Apr 2023</span>
+<p class="cv-sub-detail">Data Analytics Team of the Undergrad Academic Council</p>
+</div>
+<div class="cv-sub-item">
+<span class="cv-sub-role">Web Coordinator</span>
+<span class="cv-sub-date">May 2022 - Jun 2023</span>
+<p class="cv-sub-detail">Developed websites SARC events and alumni portals</p>
+</div>
 </div>
 </div>
 
-<div class="edu-entry">
-<div class="edu-header">
-<span class="edu-school">Indian Institute of Technology, Bombay</span>
-<span class="edu-date">Nov 2021 – Jun 2025</span>
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Aalto University, Finland</strong>
+<span class="cv-date">Jan – Jun 2025</span>
 </div>
-<div class="edu-degree">B.Tech in Mechanical Engineering, Minor in Center of Machine Intelligence & Data Science</div>
-<div class="edu-details">
-Major CPI: 8.82/10 &nbsp;&nbsp; Minor CPI: 10/10
-</div>
+<p>Semester Exchange, School of Science</p>
+<p class="cv-detail">Ranked 3/380+ in Programming Parallel Computers<br>
+<a href="/assets/pdfs/ppc_lor.pdf">Letter of Recommendation</a><br>
+CPI: 10.0/10.0</p>
 </div>
 
-<h2>Scholastic Achievements</h2>
+<!-- <section class="cv-section"> -->
+<h2>Experience</h2>
 
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Sprinklr</strong> <span class="cv-location">Gurugram, India</span>
+<span class="cv-date">May 2024 – Present</span>
+</div>
+<p class="cv-role">Machine Learning Engineer <span class="cv-role-date">Aug 2025 – Present</span></p>
 <ul>
-<li>Awarded <strong>Branch Change</strong> to Mechanical Engineering based on outstanding academic performance <span class="achievement-date">(2022)</span></li>
-<li>Amongst <strong>top 1 percentile</strong> of students in JEE out of <strong>1+ million</strong> candidates across India and abroad <span class="achievement-date">(2021)</span></li>
-<li>Awarded the prestigious <strong>NMMS</strong> Scholarship among <strong>0.1+ million</strong> talented candidates across the nation <span class="achievement-date">(2018)</span></li>
-<li>Amongst the <strong>top 1%</strong> at National level <strong>Homi Bhabha Balvaidynanik</strong> out of <strong>1+ million</strong> candidates <span class="achievement-date">(2017)</span></li>
+<li>Building production ML infrastructure for real-time voice AI systems</li>
+<li>Architected optimized speech-to-text pipelines using vLLM with significant latency improvements</li>
+<li>Designed custom vLLM scheduler for priority-based request routing in STT workloads</li>
+<li>Leading development of end-to-end voice bots for real-time conversational AI</li>
 </ul>
-
-<h2>Major Projects</h2>
-
-<div class="cv-entry project-entry">
-<div class="cv-header">
-<div class="cv-left">
-<span class="cv-company"><a href="https://github.com/martianlantern/ThinkMesh">ThinkMesh</a></span>
-<span class="project-stars">★ 259</span>
+<p class="cv-role">Product Intern <span class="cv-role-date">May – Jul 2024</span></p>
+<ul>
+<li>Evaluated unified speech-to-speech models against traditional STT→LLM→TTS pipelines</li>
+<li>Benchmarked models across latency, quality, and cost; delivered cost-effective solution</li>
+<li><em>Received Pre-Placement Offer</em></li>
+</ul>
 </div>
+
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Aalto Vision Lab</strong> <span class="cv-location">Helsinki, Finland</span>
+<span class="cv-date">Jan – Jun 2025</span>
+</div>
+<p class="cv-role">Research Assistant under <a href="https://maturk.github.io/">Matias Turkulainen</a> and <a href="https://users.aalto.fi/~kannalj1/">Juho Kannala</a></p>
+<ul>
+<li>Designed scalable multi-GPU training pipelines for feedforward gaussian splatting on SLURM</li>
+<li>Profiled and removed performance bottlenecks, increasing GPU utilization</li>
+<li>Integrated pose refinement and adaptive pruning, improving render quality</li>
+</ul>
+</div>
+
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Technical University of Munich</strong> <span class="cv-location">Munich, Germany</span>
+<span class="cv-date">Jun – Jul 2023</span>
+</div>
+<p class="cv-role">Research Intern under <a href="https://hp-cao.github.io/hongispage/">Hongpeng Cao</a> and <a href="https://rtsl.cps.mw.tum.de/personal_page/mcaccamo/">Marco Caccamo</a></p>
+<ul>
+<li>Developed system identification techniques for quadruped robot dynamics modeling</li>
+<li>Implemented and compared system models for MPC against model-free DRL approaches</li>
+</ul>
+</div>
+
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Hexo AI</strong> <span class="cv-location">Remote</span>
+<span class="cv-date">Feb 2023 – Feb 2024</span>
+</div>
+<p class="cv-role">ML Intern — Diffusion Models & LLMs</p>
+<ul>
+<li>Built text-conditional latent diffusion model for product image generation</li>
+<li>Delivered robust image inpainting models with textual conditioning</li>
+</ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="cv-item">
+<div class="cv-item-header">
+<strong><a href="https://github.com/martianlantern/ThinkMesh">ThinkMesh</a></strong> <span class="cv-stars">★ 259</span>
 <span class="cv-date">2024</span>
 </div>
-<p>Parallel reasoning framework for LLMs. Implements multiple strategies—DeepConf (confidence-gated filtering), Self-Consistency (majority voting), Debate (multi-agent discussion), Tree of Thoughts (tree search), and Graph reasoning—all running in parallel with configurable compute budgets. Supports local models via Transformers/vLLM and external APIs.</p>
+<p>Parallel reasoning framework for LLMs implementing DeepConf, Self-Consistency, Debate, Tree of Thoughts, and Graph reasoning strategies with configurable compute budgets.</p>
 </div>
 
-<div class="cv-entry project-entry">
-<div class="cv-header">
-<div class="cv-left">
-<span class="cv-company">Gaussian Masked Autoencoders</span>
-<span class="project-links">| <a href="https://github.com/darshanmakwana412/gaussian-mae">code</a></span>
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Gaussian Masked Autoencoders</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/gaussian-mae">code</a></span>
+<span class="cv-date">Feb – Mar 2025</span>
 </div>
-<span class="cv-date">Feb 2025 – Mar 2025</span>
-</div>
-<ul>
-<li>Open sourced a faithful replication of the gaussian masked autoencoders paper, exploiting 3D Gaussian splats as the intermediate latent representation for MAEs and reconstruction, enabling certain zero shot capabilities</li>
-</ul>
+<p>Replicated gaussian MAE paper using 3D Gaussian splats as intermediate latent representation, enabling zero-shot capabilities.</p>
 </div>
 
-<div class="cv-entry project-entry">
-<div class="cv-header">
-<div class="cv-left">
-<span class="cv-company">Sparse Voxel Multi View Reconstruction</span>
-<span class="project-links">| <a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction">code</a> | <a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction/blob/main/report.pdf">report</a></span>
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Sparse Voxel Multi-View Reconstruction</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction">code</a> · <a href="https://github.com/darshanmakwana412/Multi_View_Reconstruction/blob/main/report.pdf">report</a></span>
+<span class="cv-date">Sep – Nov 2024</span>
 </div>
-<span class="cv-date">Sep 2024 – Nov 2024</span>
-</div>
-<ul>
-<li>Implemented a sparse voxel 3D reconstruction pipeline covering calibrated image capture (ArUco), feature extraction and pose recovery, multi-resolution visual-hull voxelization, and volumetric fusion to produce the final mesh</li>
-</ul>
+<p>3D reconstruction pipeline: ArUco calibration, feature extraction, pose recovery, multi-resolution voxelization, and volumetric fusion.</p>
 </div>
 
-<div class="cv-entry project-entry">
-<div class="cv-header">
-<div class="cv-left">
-<span class="cv-company">Unsupervised Structural Optimization</span>
-<span class="project-links">| <a href="https://github.com/darshanmakwana412/structure_optimization/tree/main">code</a> | <a href="https://github.com/darshanmakwana412/structure_optimization/blob/main/main.pdf">report</a></span>
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Unsupervised Structural Optimization</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/structure_optimization">code</a> · <a href="https://github.com/darshanmakwana412/structure_optimization/blob/main/main.pdf">report</a></span>
+<span class="cv-date">Jan – Apr 2024</span>
 </div>
-<span class="cv-date">Jan 2024 – Apr 2024</span>
-</div>
-<div class="cv-guide">Guide: Prof Avinash Bhardwaj | Course Project - Operations Modeling and Analysis</div>
-<ul>
-<li>Created a framework for optimizing a structure under given constraints and loadings while minimizing the cost</li>
-<li>Formulated the problem as matrix equations and implemented an iterative solver for searching the optimal structure</li>
-<li>Implemented Topological Evolution via <strong>NEAT</strong> in the framework for searching the optimal topology of the structure</li>
-</ul>
+<p>Framework for structural optimization using iterative solvers and topological evolution via NEAT.</p>
 </div>
 
-<div class="cv-entry project-entry">
-<div class="cv-header">
-<div class="cv-left">
-<span class="cv-company">Fractal Curves for Tool Path Generation</span>
-<span class="project-links">| <a href="https://github.com/darshanmakwana412/fractal">code</a> | <a href="https://github.com/darshanmakwana412/fractal/blob/main/draft/tool_path_planning.pdf">report</a></span>
+<div class="cv-item">
+<div class="cv-item-header">
+<strong>Fractal Curves for Tool Path Generation</strong> <span class="cv-code-links"><a href="https://github.com/darshanmakwana412/fractal">code</a> · <a href="https://github.com/darshanmakwana412/fractal/blob/main/draft/tool_path_planning.pdf">report</a></span>
+<span class="cv-date">Aug – Nov 2023</span>
 </div>
-<span class="cv-date">Aug 2023 – Nov 2023</span>
+<p>Fractal curve algorithms for tool path planning in layered 3D printing with recursive decomposition.</p>
 </div>
-<div class="cv-guide">Guide: Prof Gurminder Singh | Course Project - Manufacturing Processes II</div>
-<ul>
-<li>Developed algorithms that leveraged <strong>fractal curves</strong> for robust <strong>Tool path planning</strong> in <strong>layered 3D printing</strong></li>
-<li>Implemented a <strong>Recursive decomposition</strong> based <strong>fractal filling</strong> for determining the trajectory of the printing tool</li>
-</ul>
-</div>
-
-<h2>Technical Skills</h2>
-
-<div class="skills-section">
-<dl>
-<dt>Programming</dt>
-<dd>Python, Matlab, C/C++, Rust, Javascript, Bash, Git, LaTeX</dd>
-<dt>Data Science</dt>
-<dd>PyTorch, TensorFlow, Numpy, Pandas, OpenCV, Matplotlib, Scikit-Learn, Scipy</dd>
-<dt>Development</dt>
-<dd>HTML, CSS, Tailwind CSS, Django, Node, React</dd>
-</dl>
-</div>
-
-<h2>Positions of Responsibility</h2>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Core Team Member</span>
-<span class="cv-date">Jul 2022 – Apr 2023</span>
-</div>
-<div class="cv-guide">Data Analytics and Visualization Team, UGAC</div>
-<ul>
-<li>Collaborated with <strong>Prof. Sunita Sarawagi</strong> from <strong>CSE, IITB</strong> for projects leveraging public <strong>Indian datasets</strong></li>
-<li>Conducted a session for explaining a research paper on <strong>Efficient Graph based Image Segmentation</strong></li>
-<li>Compiled Case studies and Analysis reports from trends in data on <strong>course grading</strong> and <strong>semester exchange</strong></li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Web Coordinator</span>
-<span class="cv-date">May 2022 – Jun 2023</span>
-</div>
-<div class="cv-guide">Student Alumni Relations Cell, IIT Bombay</div>
-<ul>
-<li>Worked in a team of <strong>5</strong> to handle the social activity and web presence of Student Alumni Relations Cell</li>
-<li>Responsible for developing various websites and games leading to <strong>5000+</strong> registrations with <strong>150% y-o-y</strong> increase</li>
-<li>Databased and interacted with <strong>100+</strong> Alumni during the <strong>35th Phonathon</strong>, telephonic marathon of IIT Bombay</li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Machine Learning Mentor</span>
-<span class="cv-date">May 2023 – Jul 2023</span>
-</div>
-<div class="cv-guide">Summer of Science, MnP Club</div>
-<ul>
-<li>Mentored <strong>7</strong> students to make them acquainted with <strong>SOTA</strong> Machine Learning algorithms and their use cases</li>
-<li>Collaborated to take part in various Machine Learning hackathons with the mentees, securing top <strong>1%</strong> in 2 of them</li>
-</ul>
-</div>
-
-<div class="cv-entry">
-<div class="cv-header">
-<span class="cv-company">Teaching Assistant</span>
-<span class="cv-date">Apr 2023 – Jun 2023</span>
-</div>
-<div class="cv-guide">Quantum Physics (PH 112) | Differential Equations (MA 108)</div>
-<ul>
-<li>Conducted weekly tutorial sessions for a batch of <strong>40</strong> students to discuss solutions to preassigned tutorial problems</li>
-<li>Solved queries throughout the semester and conducted <strong>extra doubt solving</strong> sessions for students facing difficulties</li>
-</ul>
-</div>
-
-<h2>Extra Curricular Activities</h2>
-
-<ul>
-<li>Lead team of 13 for Adobe deep fake image artifacts identification challenge for <strong>Inter IIT Tech Meet 13.0</strong> <span class="achievement-date">(Dec 2024)</span></li>
-<li>Represented IITB for Adobe Content Simulation Challenge at <strong>Inter IIT Tech Meet 12.0</strong> at IIT Madras <span class="achievement-date">(Dec 2023)</span></li>
-<li>Developed a <strong>Tower Defence AI</strong> Algorithm for competing in Correlation One's Programming Challenge <span class="achievement-date">(Jun 2023)</span></li>
-<li>Acquired Rank <strong>45</strong> among <strong>230+</strong> teams in <strong>Inter IIT Hackathon - Convolve</strong> hosted by IIT-Guwahati <span class="achievement-date">(Dec 2022)</span></li>
-</ul>
 
 </div>
 </div>
