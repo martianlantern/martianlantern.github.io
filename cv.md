@@ -5,7 +5,17 @@ permalink: /cv/
 ---
 
 <div class="col-sm-12">
-<div class="page-content cv-page">
+<div class="page-content cv-page" id="cv-content">
+<div class="cv-title-row">
+<h1><a href="https://martianlantern.github.io/cv/" class="cv-main-title">Curriculum Vitae</a></h1>
+<button id="download-cv-btn" class="download-cv-btn" onclick="downloadCV()" title="Download PDF">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+<polyline points="7 10 12 15 17 10"></polyline>
+<line x1="12" y1="15" x2="12" y2="3"></line>
+</svg>
+</button>
+</div>
 
 <div class="cv-hero">
 <div class="cv-hero-content">
@@ -217,5 +227,171 @@ CPI: 10.0/10.0</p>
 </div>
 </div>
 
+<h2>Publications</h2>
+
+<div class="cv-item">
+<div class="cv-item-header">
+<span class="cv-project-title">COVID-19 Self diagnosis classification using BERT and LightGBM models: Shayona</span>
+<span class="cv-date">Jul 2023</span>
+</div>
+<p class="cv-desc">R Chavda, <strong>Darshan Makwana</strong>, et al. Accepted at SMM4H 2023 (Social Media Mining for Health Applications)</p>
+</div>
+
 </div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+async function downloadCV() {
+  const btn = document.getElementById('download-cv-btn');
+  const originalHTML = btn.innerHTML;
+  
+  // Show loading state
+  btn.innerHTML = `
+    <svg class="spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="32"></circle>
+    </svg>
+  `;
+  btn.disabled = true;
+  
+  try {
+    const element = document.getElementById('cv-content');
+    
+    // Hide button before PDF generation
+    btn.style.display = 'none';
+    
+    // Get element height to create single long page
+    const elementHeight = element.scrollHeight;
+    const elementWidth = element.scrollWidth;
+    
+    // Calculate page dimensions (A4 width, dynamic height)
+    const pdfWidth = 8.27; // inches
+    const pdfHeight = (elementHeight / elementWidth) * pdfWidth + 1;
+    
+    const opt = {
+      margin: [0.4, 0.5, 0.4, 0.5],
+      filename: 'Darshan_Makwana_CV.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { 
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        scrollY: -window.scrollY
+      },
+      jsPDF: { 
+        unit: 'in', 
+        format: [pdfWidth, pdfHeight],
+        orientation: 'portrait' 
+      }
+    };
+    
+    await html2pdf().set(opt).from(element).save();
+  } catch (err) {
+    console.error('PDF generation failed:', err);
+    alert('Failed to generate PDF. Please try again.');
+  } finally {
+    // Show button again
+    btn.style.display = '';
+    btn.innerHTML = originalHTML;
+    btn.disabled = false;
+  }
+}
+</script>
+
+<style>
+.cv-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.cv-title-row h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.cv-main-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #353535;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.cv-main-title:hover {
+  text-decoration: underline;
+  text-decoration-color: #888;
+  text-underline-offset: 4px;
+}
+
+.download-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: #555;
+  background: #f5f5f5;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.download-cv-btn:hover:not(:disabled) {
+  background: #353535;
+  color: #fff;
+  border-color: #353535;
+}
+
+.download-cv-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.download-cv-btn svg {
+  flex-shrink: 0;
+}
+
+.download-cv-btn .spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .cv-main-title {
+  color: #c9d1d9;
+}
+
+[data-theme="dark"] .cv-main-title:hover {
+  color: #fff;
+  text-decoration-color: #58a6ff;
+}
+
+[data-theme="dark"] .download-cv-btn {
+  background: #21262d;
+  color: #8b949e;
+  border-color: #30363d;
+}
+
+[data-theme="dark"] .download-cv-btn:hover:not(:disabled) {
+  background: #238636;
+  color: #fff;
+  border-color: #238636;
+}
+
+/* Hide button in PDF */
+@media print {
+  .download-cv-btn {
+    display: none !important;
+  }
+}
+</style>
