@@ -8,8 +8,28 @@ title: Bookmarks
         {{ page.title }}
     </div>
     <div class="posts-list-clean">
-        <p class="cool-stuff-tagline">Interesting things I've found on the internet</p>
+        <p class="cool-stuff-tagline">Interesting things I've read on the internet</p>
+
+        <a href="https://grohan.co/2025/11/25/llmfuse/" class="post-entry" target="_blank">
+            <span class="post-title">Compressed Filesystems á la Language Models</span>
+        </a>
+
+        <a href="https://danluu.com/productivity-velocity/" class="post-entry" target="_blank">
+            <span class="post-title">Some Reasons to work on Productivity Velocity</span>
+        </a>
+
+        <a href="https://playbook.samaltman.com/" class="post-entry" target="_blank">
+            <span class="post-title">Sam Altman's Start up Playbook</span>
+        </a>
+
+        <a href="https://abseil.io/fast/hints" class="post-entry" target="_blank">
+            <span class="post-title">Performance Hints</span>
+        </a>
         
+        <a href="https://leerob.com/agents" class="post-entry" target="_blank">
+            <span class="post-title">Cursor Migrating it's CMS to code</span>
+        </a>
+
         <a href="https://jessylin.com/2025/10/20/continual-learning/" class="post-entry" target="_blank">
             <span class="post-title">The continual learning problem</span>
         </a>
