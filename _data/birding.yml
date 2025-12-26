@@ -1,0 +1,41 @@
+images:
+  - name: great_hornbill
+    scientific_name: Buceros bicornis
+  - name: indian_golden_oriole
+    scientific_name: Oriolus kundoo
+  - name: orange_minivet
+    scientific_name: Pericrocotus flammeus
+  - name: oriental_magpie_robin
+    scientific_name: Copsychus saularis
+  - name: golden_eagle
+    scientific_name: Aquila chrysaetos
+  - name: asian_bee_eater
+    scientific_name: Merops orientalis
+  - name: hornbill
+    scientific_name: Ocyceros birostris
+  - name: greater_coucal
+    scientific_name: Centropus sinensis
+  - name: white_throated_kingfisher
+    scientific_name: Halcyon smyrnensis
+  - name: grumpy_babbler
+    scientific_name: Turdoides eremita
+  - name: parrot
+    scientific_name: Psittaciformes
+  - name: bank_mayna
+    scientific_name: Acridotheres ginginianus
+  - name: woodpecker
+    scientific_name: Picidae
+  - name: kingfisher
+    scientific_name: Alcedo atthis
+  - name: dragonfly
+    scientific_name: Anisoptera
+  - name: black_kite
+    scientific_name: Milvus migrans
+  - name: crow
+    scientific_name: Corvus
+  - name: koel
+    scientific_name: Eudynamys scolopaceus
+  - name: magpie
+    scientific_name: Pica pica
+  - name: mayna
+    scientific_name: Acridotheres tristis
