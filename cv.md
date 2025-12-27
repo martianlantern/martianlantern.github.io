@@ -20,7 +20,7 @@ permalink: /cv/
 <div class="cv-hero">
 <div class="cv-hero-content">
 <p class="cv-bio">
-My name is Darshan Makwana and I'm a Machine Learning Engineer at <a href="https://www.sprinklr.com/">Sprinklr</a> working on LLM Sys and real time voice AI systems. Previously, I was a Research Assistant at <a href="https://users.aalto.fi/~kannalj1/">Aalto Vision Lab</a> working on 3D Gaussian Splatting and also did research internships at <a href="https://www.tum.de/en/">TU Munich</a> on quadruped robotics and <a href="https://www.hexo.ai/">Hexo AI</a> on diffusion models.
+My name is Darshan Makwana and I'm a 22 year old Machine Learning Engineer at <a href="https://www.sprinklr.com/">Sprinklr</a> working on LLM Sys and real time voice AI systems. Previously, I was a Research Assistant at <a href="https://users.aalto.fi/~kannalj1/">Aalto Vision Lab</a> working on 3D Gaussian Splatting and also did research internships at <a href="https://www.tum.de/en/">TU Munich</a> on quadruped robotics and <a href="https://www.hexo.ai/">Hexo AI</a> on diffusion models.
 </p>
 <p class="cv-bio">
 I graduated from <a href="https://www.iitb.ac.in/">IIT Bombay</a> with a B.Tech in Mechanical Engineering and Dual Minor in Computer Science and Machine Learning. My interests span computer vision, 3D reconstruction, and efficient ML systems
