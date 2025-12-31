@@ -15,7 +15,11 @@ title: Bookmarks
         </a>
 
         <a href="https://danluu.com/productivity-velocity/" class="post-entry" target="_blank">
-            <span class="post-title">Some Reasons to work on Productivity Velocity</span>
+            <span class="post-title">Some Reasons to work on Productivity and Velocity</span>
+        </a>
+
+        <a href="https://www.zhihu.com/question/1969558404759544488/answer/1970539327902679960" class="post-entry" target="_blank">
+            <span class="post-title">Quantization Decisions made in the development of Kimi K2 Thinking</span>
         </a>
 
         <a href="https://playbook.samaltman.com/" class="post-entry" target="_blank">
