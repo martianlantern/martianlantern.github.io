@@ -14,6 +14,18 @@ title: Bookmarks
             <span class="post-title">Direct Preference Optimization Explained</span>
         </a>
 
+        <a href="https://huggingface.co/spaces/HuggingFaceTB/smol-training-playbook#introduction" class="post-entry" target="_blank">
+            <span class="post-title">The smol training playbook</span>
+        </a>
+
+        <a href="https://rlhfbook.com/" class="post-entry" target="_blank">
+            <span class="post-title">Reinforcement Learning from Human Feedback</span>
+        </a>
+
+        <a href="https://ossa-ma.github.io/blog/groq" class="post-entry" target="_blank">
+            <span class="post-title">Nvidia's $20B Antitrust Loophole</span>
+        </a>
+
         <a href="https://grohan.co/2025/11/25/llmfuse/" class="post-entry" target="_blank">
             <span class="post-title">Compressed Filesystems á la Language Models</span>
         </a>
