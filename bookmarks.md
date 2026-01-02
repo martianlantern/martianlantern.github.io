@@ -10,6 +10,10 @@ title: Bookmarks
     <div class="posts-list-clean">
         <p class="cool-stuff-tagline">Interesting things I've read on the internet</p>
 
+        <a href="https://www.tylerromero.com/posts/2024-04-dpo/" class="post-entry" target="_blank">
+            <span class="post-title">Direct Preference Optimization Explained</span>
+        </a>
+
         <a href="https://grohan.co/2025/11/25/llmfuse/" class="post-entry" target="_blank">
             <span class="post-title">Compressed Filesystems á la Language Models</span>
         </a>
