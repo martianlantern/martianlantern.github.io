@@ -22,6 +22,10 @@ title: Bookmarks
             <span class="post-title">Reinforcement Learning from Human Feedback</span>
         </a>
 
+        <a href="https://www.calvinbarker.com/blog/reflections-and-rantings-from-a-system-design-interviewer" class="post-entry" target="_blank">
+            <span class="post-title">Reflections and Rantings from a System Design Interviewer</span>
+        </a>
+
         <a href="https://ossa-ma.github.io/blog/groq" class="post-entry" target="_blank">
             <span class="post-title">Nvidia's $20B Antitrust Loophole</span>
         </a>
