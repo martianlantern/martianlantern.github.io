@@ -22,6 +22,10 @@ title: Bookmarks
             <span class="post-title">Reinforcement Learning from Human Feedback</span>
         </a>
 
+        <a href="https://shailppatel.com/2025/12/23/essential-guide-to-hiring-a-vp-cto-for-startups-part-1/" class="post-entry" target="_blank">
+            <span class="post-title">Essential Guide to Hiring a VP/CTO for Startups</span>
+        </a>
+
         <a href="https://www.calvinbarker.com/blog/reflections-and-rantings-from-a-system-design-interviewer" class="post-entry" target="_blank">
             <span class="post-title">Reflections and Rantings from a System Design Interviewer</span>
         </a>
