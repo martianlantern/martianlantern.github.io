@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Fast Matrix Multiplication with AVX 512 and Loop Tiling
-date: 2026-01-18
+date: 2026-01-17
 comments: false
 tags: [optimization, cpp, simd, avx512, hpc]
 archive: false
