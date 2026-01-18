@@ -127,6 +127,66 @@ The main Strassen function partitions A and B into quadrants, allocates temporar
 
 ```cpp
 static inline
+void matmul_kernel(
+    float *C, const float *A, const float *B,
+    int n, int stride
+) {
+    #pragma omp parallel for collapse(2) schedule(dynamic, 1)
+    for(int ic=0; ic<n; ic+= MC) for(int jc=0; jc<n; jc+=NC) {
+        int Mb = std::min(MC, n - ic);
+        int Nb = std::min(NC, n - jc);
+        for (int kc = 0; kc < n; kc += KC) {
+            int Kb = std::min(KC, n - kc);
+
+            for (int ib = 0; ib < Mb; ib += 16) {
+                for (int jb = 0; jb < Nb; jb += 32) {
+
+                    __m512 psum[2][16] = {};
+
+                    const float *blocki = A + (ic + ib) + kc * stride;
+                    const float *blockj = B + (jc + jb) + kc * stride;
+
+                    for (int k = 0; k < Kb; k++) {
+
+                        __m512 b0 = _mm512_load_ps(blockj + k * stride);
+                        __m512 b1 = _mm512_load_ps(blockj + k * stride + NUM_LOADS);
+                        for(int ik=0; ik<16; ik++) {
+                            __m512 a = _mm512_set1_ps(*(blocki + ik + k * stride));
+                            psum[0][ik] = _mm512_fmadd_ps(
+                                b0,
+                                a,
+                                psum[0][ik]
+                            );
+                            psum[1][ik] = _mm512_fmadd_ps(
+                                b1,
+                                a,
+                                psum[1][ik]
+                            );
+                        }
+
+                    }
+
+                    for(int ik=0; ik<16; ik++) {
+                        float *loc_ptr = C + (ic + ib + ik) * stride + jc + jb;
+                        _mm512_store_ps(
+                            loc_ptr,
+                            _mm512_add_ps(_mm512_load_ps(loc_ptr), psum[0][ik])
+                        );
+                        _mm512_store_ps(
+                            loc_ptr + NUM_LOADS,
+                            _mm512_add_ps(_mm512_load_ps(loc_ptr + NUM_LOADS), psum[1][ik])
+                        );
+                    }
+
+                }
+            }
+
+        }
+
+    }
+}
+
+static inline
 void strassenMatmul(
     float *C,
     const float *A,
