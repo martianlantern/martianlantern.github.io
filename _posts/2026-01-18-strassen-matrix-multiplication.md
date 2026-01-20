@@ -7,7 +7,7 @@ tags: [optimization, cpp, simd, avx512, algorithms]
 archive: false
 ---
 
-In the previous [matmul with avx512 and loop tiling](/2026/01/18/avx512-matrix-multiplication.html) note we managed to build a cpu kernel that achieves 92% of peak FLOPS. I wanted to check if we can do better by using Strassen's algorithm. [Strassen's algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) from 1969 showed that matrix multiplication can be done in $O(n^{2.807})$ by trading multiplications for additions. The main idea of this post is to use strassens for high level recursions and fallback to our highly optimized kernel for lower levels
+In the previous [matmul with avx512 and loop tiling](/2026/01/17/avx512-matrix-multiplication.html) note we managed to build a cpu kernel that achieves 92% of peak FLOPS. I wanted to check if we can do better by using Strassen's algorithm. [Strassen's algorithm](https://en.wikipedia.org/wiki/Strassen_algorithm) from 1969 showed that matrix multiplication can be done in $O(n^{2.807})$ by trading multiplications for additions. The main idea of this post is to use strassens for high level recursions and fallback to our highly optimized kernel for lower levels
 
 **Table of Contents:**
 - [The Standard Algorithm](#the-standard-algorithm)
