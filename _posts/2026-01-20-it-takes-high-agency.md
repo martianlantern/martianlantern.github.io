@@ -4,7 +4,7 @@ title: It takes very high agency
 date: 2026-01-20
 comments: false
 tags: [life, philosophy]
-archive: false
+archive: true
 ---
 
 It takes very high agency
