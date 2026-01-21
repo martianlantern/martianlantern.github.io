@@ -10,6 +10,10 @@ title: Bookmarks
     <div class="posts-list-clean">
         <p class="cool-stuff-tagline">Interesting things I've read on the internet</p>
 
+        <a href="https://blog.alexewerlof.com/p/ai-systems-engineering-patterns" class="post-entry target="_blank">
+            <span class="post-title">AI Systems Engineering Patterns</span>
+        </a>
+
         <a href="https://www.klio.org/theory-of-llm-dev-skepticism/" class="post-entry" target="_blank">
             <span class="post-title">Bottom up programming as the root of LLM dev skepticism</span>
         </a>
