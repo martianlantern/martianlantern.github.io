@@ -12,3 +12,7 @@ I occasionally find myself working on multiple projects at any given time. For p
 Now instead the framework that I have put in place is when I first come across an idea try to think of all possible ways in which it will not work and fail to give desired results i.e try to fail or defeat your ideas. Now if they survive this initial stress test, it passes to spend more resources and effort into. Maybe do a small fast experiment to validate it. Now after implementing it, if it works, it's great and I feel happy about it. But when it does not work I don’t lose my productivity as not a lot of mental cognition and bandwidth was spent into it. In fact I go back in my journal and back trace the initial investigation and scrutiny that was spent on it and try to figure out what was the cause of their divergence. Sometimes I find some flaws in my method of initial investigation and scrutiny, I update my mental model and beliefs, I gain some very good insights just because it failed. I can now move to next idea with the same level of productivity and possibly better insights and strategies on tackling the next one
 
 Overtime this has made me faster at learning from things that didn’t work and prioritize ideas that are worth spending the time on
+
+---
+
+Thank you to Harsh, Yash, Tanmay for reading draft of this
