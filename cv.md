@@ -28,7 +28,7 @@ I graduated from <a href="https://www.iitb.ac.in/">IIT Bombay</a> with a B.Tech 
 <div class="cv-contact-info">
 <div class="cv-contact-item">
 <span class="cv-contact-label">Email</span>
-<a href="mailto:martianlantern@gmail.com">martianlantern@gmail.com</a>
+<a href="mailto:martianlantern@gmail.com">darshanmakwana412@gmail.com</a>
 </div>
 <div class="cv-contact-item">
 <span class="cv-contact-label">GitHub</span>
