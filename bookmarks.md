@@ -10,7 +10,11 @@ title: Bookmarks
     <div class="posts-list-clean">
         <p class="cool-stuff-tagline">Interesting things I've read on the internet</p>
 
-        <a href="https://blog.alexewerlof.com/p/ai-systems-engineering-patterns" class="post-entry target="_blank">
+        <a href="https://netflixtechblog.com/how-and-why-netflix-built-a-real-time-distributed-graph-part-1-ingesting-and-processing-data-80113e124acc" class="post-entry" target="_blank">
+            <span class="post-title">How and why Netflix built a real time distributed graph</span>
+        </a>
+
+        <a href="https://blog.alexewerlof.com/p/ai-systems-engineering-patterns" class="post-entry" target="_blank">
             <span class="post-title">AI Systems Engineering Patterns</span>
         </a>
 
