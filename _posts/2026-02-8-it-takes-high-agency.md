@@ -1,10 +1,10 @@
 ---
 layout: post
 title: It takes very high agency
-date: 2026-02-09
+date: 2026-02-08
 comments: false
 tags: [life, philosophy]
-archive: true
+archive: false
 ---
 
 It takes very high agency
