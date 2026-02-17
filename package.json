@@ -1,0 +1,10 @@
+{
+  "name": "martianlantern-screenshots",
+  "private": true,
+  "scripts": {
+    "screenshot": "node screenshot-post.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  }
+}

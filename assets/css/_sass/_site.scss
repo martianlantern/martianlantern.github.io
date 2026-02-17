@@ -580,6 +580,60 @@ pre code {
   font-size: 85%;
 }
 
+// Post body links - subtle underline highlight
+.page-content p a,
+.page-content li a {
+  text-decoration: underline;
+  text-decoration-color: #999;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.15s ease;
+
+  &:hover {
+    text-decoration-color: #353535;
+    text-decoration-thickness: 2px;
+  }
+}
+
+// Footnote superscript references
+.page-content sup a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #888;
+  padding: 0 1px;
+
+  &:hover {
+    color: #353535;
+  }
+}
+
+// Footnotes section
+.page-content .footnotes {
+  margin-top: 1.5rem;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  sup {
+    font-size: 11px;
+    color: #888;
+    margin-right: 4px;
+  }
+
+  a {
+    text-decoration-color: #ccc;
+    text-decoration-thickness: 1px;
+
+    &:hover {
+      text-decoration-color: #353535;
+    }
+  }
+}
+
 // HR - exact grohan.co
 hr {
   background: #353535;
@@ -1729,6 +1783,41 @@ hr {
     .achievement-date { color: #8b949e; }
   }
   
+  // Post body links - dark mode
+  .page-content p a,
+  .page-content li a {
+    text-decoration-color: #484f58;
+
+    &:hover {
+      text-decoration-color: #79c0ff;
+      text-decoration-thickness: 2px;
+    }
+  }
+
+  .page-content sup a {
+    color: #6e7681;
+
+    &:hover {
+      color: #79c0ff;
+    }
+  }
+
+  .page-content .footnotes {
+    color: #8b949e;
+
+    sup {
+      color: #6e7681;
+    }
+
+    a {
+      text-decoration-color: #30363d;
+
+      &:hover {
+        text-decoration-color: #58a6ff;
+      }
+    }
+  }
+
   // HR
   hr { background: #30363d; }
   
